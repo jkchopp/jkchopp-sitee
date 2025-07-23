@@ -172,6 +172,13 @@
 
     <!-- Mobile menu button -->
     <button id="menu-toggle" class="md:hidden text-white focus:outline-none">
+      <!-- Mobile Navigation Menu -->
+<div id="mobile-menu" class="mobile-menu bg-[#060d13] md:hidden fixed top-16 left-0 w-full z-40 p-6 space-y-4 text-center">
+  <a href="#inicio" class="block text-white text-lg nav-link">Início</a>
+  <a href="#catalogo" class="block text-white text-lg nav-link">Catálogo</a>
+  <a href="#servicos" class="block text-white text-lg nav-link">Serviços</a>
+  <a href="#contato" class="block text-white text-lg nav-link">Contato</a>
+</div>
       <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
       </svg>
@@ -200,19 +207,22 @@
     </a>
   </div>
 
-  <!-- Cervejas decorativas (mantidas) -->
-  <div class="absolute bottom-0 left-0 opacity-20 hidden md:block">
-    <svg width="150" height="150" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-      <path d="M7 2H17L19.5 12H4.5L7 2Z" fill="#d4af37"/>
-      <path d="M5 14H19V20C19 21.1046 18.1046 22 17 22H7C5.89543 22 5 21.1046 5 20V14Z" fill="#d4af37"/>
-    </svg>
-  </div>
-  <div class="absolute bottom-10 right-0 opacity-20 hidden md:block">
-    <svg width="120" height="120" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-      <path d="M7 2H17L19.5 12H4.5L7 2Z" fill="#d4af37"/>
-      <path d="M5 14H19V20C19 21.1046 18.1046 22 17 22H7C5.89543 22 5 21.1046 5 20V14Z" fill="#d4af37"/>
-    </svg>
-  </div>
+ <!-- Cervejas decorativas - estilo caneca com espuma -->
+<div class="absolute bottom-0 left-0 opacity-20 hidden md:block">
+  <svg width="140" height="140" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <rect x="18" y="18" width="28" height="38" rx="4" fill="#d4af37"/>
+    <path d="M46 22h4c3 0 6 2 6 6s-3 6-6 6h-4v-12z" fill="#d4af37"/>
+    <path d="M20 18c0-4 6-6 8-2 2-4 8-4 9 0 2-4 8-2 8 2" stroke="white" stroke-width="3" stroke-linecap="round"/>
+  </svg>
+</div>
+
+<div class="absolute bottom-10 right-0 opacity-20 hidden md:block">
+  <svg width="110" height="110" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <rect x="20" y="20" width="24" height="34" rx="4" fill="#d4af37"/>
+    <path d="M44 24h3c3 0 5 2 5 5s-2 5-5 5h-3v-10z" fill="#d4af37"/>
+    <path d="M22 20c0-3 5-5 7-2 2-4 7-3 8 0 2-3 7-1 7 2" stroke="white" stroke-width="2.5" stroke-linecap="round"/>
+  </svg>
+</div>
 </header>
 
   <!-- Catalog Section -->
@@ -223,21 +233,29 @@
         <p class="text-lg text-gray-300 max-w-2xl mx-auto">Oferecemos uma seleção premium de chopps para todos os gostos. Confira nossas opções e escolha a que mais combina com você!</p>
       </div>
      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-  <!-- Oriente -->
-  <div class="beer-card rounded-xl p-6 flex flex-col items-center text-center border border-yellow-500">
-    <img src="oriente.png" alt="Oriente" class="w-24 h-24 object-contain rounded-full mb-4">
-    <h3 class="text-xl font-bold mb-2 gold-text">Oriente</h3>
-    <p class="text-gray-300 mb-4">Nosso carro-chefe! Um chopp dourado com sabor equilibrado e refrescante.</p>
+  
+      <!-- Oriente -->
+<div class="beer-card rounded-xl p-6 flex flex-col items-center text-center border border-yellow-500">
+  <img src="oriente.png" alt="Oriente" class="w-24 h-24 object-contain rounded-full mb-4">
+  <h3 class="text-xl font-bold mb-2 gold-text">Oriente</h3>
+  <p class="text-gray-300 mb-4">Nosso carro-chefe! Um chopp dourado com sabor equilibrado e refrescante.</p>
+  
+  <div class="flex space-x-2 justify-center">
     <span class="bg-[#091118] px-4 py-1 rounded-full text-sm font-medium">Carro-chefe</span>
+    <span class="bg-[#d4af37] text-black px-4 py-1 rounded-full text-sm font-medium">Mais vendido</span>
   </div>
+</div>
 
-  <!-- Gold -->
-  <div class="beer-card rounded-xl p-6 flex flex-col items-center text-center">
-    <img src="gold.png" alt="Gold" class="w-24 h-24 object-contain rounded-full mb-4">
-    <h3 class="text-xl font-bold mb-2 gold-text">Gold</h3>
-    <p class="text-gray-300 mb-4">Um chopp premium com notas maltadas e acabamento suave.</p>
-    <span class="bg-[#091118] px-4 py-1 rounded-full text-sm font-medium">Premium</span>
+ <!-- Arte Barroca -->
+<div class="beer-card rounded-xl p-6 flex flex-col items-center text-center border border-yellow-500">
+  <img src="artebarroca.png" alt="Arte Barroca" class="w-24 h-24 object-contain rounded-full mb-4">
+  <h3 class="text-xl font-bold mb-2 gold-text">Arte Barroca</h3>
+  <p class="text-gray-300 mb-4">Exclusivo chopp de vinho com sabor sofisticado e único.</p>
+  <div class="flex space-x-2 justify-center">
+    <span class="bg-[#091118] px-4 py-1 rounded-full text-sm font-medium">Especial</span>
+    <span class="bg-[#d4af37] text-black px-4 py-1 rounded-full text-sm font-medium">Mais pedido</span>
   </div>
+</div>
 
   <!-- Brahma -->
   <div class="beer-card rounded-xl p-6 flex flex-col items-center text-center">
@@ -255,20 +273,20 @@
     <span class="bg-[#091118] px-4 py-1 rounded-full text-sm font-medium">Importado</span>
   </div>
 
+<!-- Gold -->
+  <div class="beer-card rounded-xl p-6 flex flex-col items-center text-center">
+    <img src="gold.png" alt="Gold" class="w-24 h-24 object-contain rounded-full mb-4">
+    <h3 class="text-xl font-bold mb-2 gold-text">Gold</h3>
+    <p class="text-gray-300 mb-4">Um chopp premium com notas maltadas e acabamento suave.</p>
+    <span class="bg-[#091118] px-4 py-1 rounded-full text-sm font-medium">Premium</span>
+  </div>
+
   <!-- Itaipava -->
   <div class="beer-card rounded-xl p-6 flex flex-col items-center text-center">
     <img src="itaipava.png" alt="Itaipava" class="w-24 h-24 object-contain rounded-full mb-4">
     <h3 class="text-xl font-bold mb-2 gold-text">Itaipava</h3>
     <p class="text-gray-300 mb-4">Chopp leve e refrescante, perfeito para dias quentes.</p>
-    <span class="bg-[#091118] px-4 py-1 rounded-full text-sm font-medium">Refrescante</span>
-  </div>
-
-  <!-- Arte Barroca -->
-  <div class="beer-card rounded-xl p-6 flex flex-col items-center text-center border border-yellow-500">
-    <img src="artebarroca.png" alt="Arte Barroca" class="w-24 h-24 object-contain rounded-full mb-4">
-    <h3 class="text-xl font-bold mb-2 gold-text">Arte Barroca</h3>
-    <p class="text-gray-300 mb-4">Exclusivo chopp de vinho com sabor sofisticado e único.</p>
-    <span class="bg-[#091118] px-4 py-1 rounded-full text-sm font-medium">Especial</span>
+   <span class="bg-[#091118] px-4 py-1 rounded-full text-sm font-medium">Refrescante</span>
   </div>
 </div>
 
@@ -393,75 +411,103 @@
       </div>
       
       <div class="max-w-4xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-8">
-        <div class="bg-[#091118] rounded-xl p-8 shadow-lg">
-          <h3 class="text-xl font-bold mb-6 gold-text">Informações de Contato</h3>
-          
-          <div class="flex items-start mb-6">
-            <div class="w-10 h-10 bg-[#d4af37] bg-opacity-20 rounded-full flex items-center justify-center mr-4 flex-shrink-0">
-              <i class="fab fa-whatsapp text-[#d4af37]"></i>
-            </div>
-            <div>
-              <p class="font-bold mb-1">WhatsApp</p>
-              <a href="https://wa.me/5518996305019" class="text-gray-300 hover:text-white transition-colors">5518996305019</a>
-            </div>
-          </div>
-          
-          <div class="flex items-start mb-6">
-            <div class="w-10 h-10 bg-[#d4af37] bg-opacity-20 rounded-full flex items-center justify-center mr-4 flex-shrink-0">
-              <i class="fab fa-instagram text-[#d4af37]"></i>
-            </div>
-            <div>
-              <p class="font-bold mb-1">Instagram</p>
-              <a href="https://instagram.com/jkchopp" target="_blank" class="text-gray-300 hover:text-white transition-colors">@jkchopp</a>
-            </div>
-          </div>
-          
-          <div class="flex items-start mb-6">
-            <div class="w-10 h-10 bg-[#d4af37] bg-opacity-20 rounded-full flex items-center justify-center mr-4 flex-shrink-0">
-              <i class="fas fa-envelope text-[#d4af37]"></i>
-            </div>
-            <div>
-              <p class="font-bold mb-1">Email</p>
-              <a href="mailto:www.jkchopp@gmail.com" class="text-gray-300 hover:text-white transition-colors">www.jkchopp@gmail.com</a>
-            </div>
-          </div>
-          
-          <div class="flex items-start">
-            <div class="w-10 h-10 bg-[#d4af37] bg-opacity-20 rounded-full flex items-center justify-center mr-4 flex-shrink-0">
-              <i class="fas fa-map-marker-alt text-[#d4af37]"></i>
-            </div>
-            <div>
-              <p class="font-bold mb-1">Área de Atendimento</p>
-              <p class="text-gray-300">Araçatuba e região</p>
-            </div>
-          </div>
-        </div>
-        
-        <div class="bg-[#091118] rounded-xl p-8 shadow-lg flex flex-col justify-center">
-          <h3 class="text-xl font-bold mb-6 gold-text text-center">Horário de Atendimento</h3>
-          
-          <div class="space-y-4">
-            <div class="flex justify-between items-center pb-2 border-b border-gray-700">
-              <span>Segunda a Sexta</span>
-              <span class="font-bold">08:00 - 18:00</span>
-            </div>
-            <div class="flex justify-between items-center pb-2 border-b border-gray-700">
-              <span>Sábado</span>
-              <span class="font-bold">08:00 - 22:00</span>
-            </div>
-            <div class="flex justify-between items-center">
-              <span>Domingo</span>
-              <span class="font-bold">Plantão</span>
-            </div>
-          </div>
-          
-          <div class="mt-8 text-center">
-            <a href="https://wa.me/5518996305019?text=Olá,%20gostaria%20de%20fazer%20um%20pedido%20de%20chopp%20com%20vocês!" ... 
-               class="whatsapp-btn inline-flex items-center px-6 py-3 rounded-full text-white font-bold shadow-lg">
-              <i class="fab fa-whatsapp mr-2"></i>
-              Fale conosco
-            </a>
-          </div>
+  <!-- Informações de Contato -->
+  <div class="bg-[#091118] rounded-xl p-8 shadow-lg flex flex-col justify-between">
+  <div>
+    <h3 class="text-xl font-bold mb-6 gold-text">Informações de Contato</h3>
+
+    <!-- WhatsApp -->
+    <div class="flex items-start mb-6">
+      <div class="w-10 h-10 bg-[#d4af37] bg-opacity-20 rounded-full flex items-center justify-center mr-4 flex-shrink-0">
+        <i class="fab fa-whatsapp text-[#d4af37]"></i>
+      </div>
+      <div>
+        <p class="font-bold mb-1">WhatsApp</p>
+        <a href="https://wa.me/5518996305019" class="text-gray-300 hover:text-white transition-colors">5518996305019</a>
+      </div>
+    </div>
+
+    <!-- Instagram -->
+    <div class="flex items-start mb-6">
+      <div class="w-10 h-10 bg-[#d4af37] bg-opacity-20 rounded-full flex items-center justify-center mr-4 flex-shrink-0">
+        <i class="fab fa-instagram text-[#d4af37]"></i>
+      </div>
+      <div>
+        <p class="font-bold mb-1">Instagram</p>
+        <a href="https://instagram.com/jkchopp" target="_blank" class="text-gray-300 hover:text-white transition-colors">@jkchopp</a>
+      </div>
+    </div>
+
+    <!-- Email -->
+    <div class="flex items-start mb-6">
+      <div class="w-10 h-10 bg-[#d4af37] bg-opacity-20 rounded-full flex items-center justify-center mr-4 flex-shrink-0">
+        <i class="fas fa-envelope text-[#d4af37]"></i>
+      </div>
+      <div>
+        <p class="font-bold mb-1">Email</p>
+        <a href="mailto:jkchopp@gmail.com" class="text-gray-300 hover:text-white transition-colors">jkchopp@gmail.com</a>
+      </div>
+    </div>
+
+    <!-- Endereço -->
+    <div class="flex items-start mb-6">
+      <div class="w-10 h-10 bg-[#d4af37] bg-opacity-20 rounded-full flex items-center justify-center mr-4 flex-shrink-0">
+        <i class="fas fa-map-marker-alt text-[#d4af37]"></i>
+      </div>
+      <div>
+        <p class="font-bold mb-1">Endereço</p>
+        <p class="text-gray-300">Rua América do Sul, 945 – Jardim Brasília – Araçatuba – SP</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Botão Fale Conosco centralizado dentro do cartão -->
+  <div class="mt-8 text-center">
+    <a href="https://wa.me/5518996305019?text=Olá,%20gostaria%20de%20fazer%20um%20pedido%20de%20chopp%20com%20vocês!" 
+       class="whatsapp-btn inline-flex items-center px-6 py-4 rounded-full text-white font-bold text-lg shadow-lg">
+      <i class="fab fa-whatsapp mr-2 text-xl"></i>
+      Fale conosco
+    </a>
+  </div>
+</div>
+
+
+  <!-- Horário + Mapa -->
+  <div class="bg-[#091118] rounded-xl p-8 shadow-lg flex flex-col justify-center">
+    <h3 class="text-xl font-bold mb-6 gold-text text-center">Horário de Atendimento</h3>
+
+    <div class="space-y-4 mb-8">
+      <div class="flex justify-between items-center pb-2 border-b border-gray-700">
+        <span>Segunda a Sexta</span>
+        <span class="font-bold">08:00 - 18:00</span>
+      </div>
+      <div class="flex justify-between items-center pb-2 border-b border-gray-700">
+        <span>Sábado</span>
+        <span class="font-bold">08:00 - 22:00</span>
+      </div>
+      <div class="flex justify-between items-center">
+        <span>Domingo</span>
+        <span class="font-bold">Plantão</span>
+      </div>
+    </div>
+
+    <!-- Mapa -->
+    <div class="rounded-xl overflow-hidden shadow-lg border border-[#d4af37]">
+      <a href="https://www.google.com/maps/place/Rua+América+do+Sul,+945,+Jardim+Brasília,+Araçatuba+-+SP,+16025-600" target="_blank" rel="noopener noreferrer">
+  <div class="overflow-hidden rounded-xl shadow-lg border border-[#d4af37]">
+    <iframe
+      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3738.5451904063935!2d-50.43415838543087!3d-21.214476085904726!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x949623ae160f4b35%3A0x5f93e5eac8de1cf5!2sR.%20Am%C3%A9rica%20do%20Sul%2C%20945%20-%20Jardim%20Brasilia%2C%20Ara%C3%A7atuba%20-%20SP%2C%2016025-600!5e0!3m2!1spt-BR!2sbr!4v1692031107227!5m2!1spt-BR!2sbr"
+      width="100%"
+      height="250"
+      style="border:0; pointer-events: none;"
+      allowfullscreen=""
+      loading="lazy"
+      referrerpolicy="no-referrer-when-downgrade">
+    </iframe>
+  </div>
+</a>
+  </div>
+</div>         
         </div>
       </div>
     </div>
@@ -485,35 +531,37 @@
     <div class="container mx-auto">
       <div class="flex flex-col md:flex-row justify-between items-center">
         <div class="mb-6 md:mb-0">
-          <a href="#" class="text-2xl font-bold gold-text flex items-center">
-            <svg class="w-8 h-8 mr-2" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path d="M7 2H17L19.5 12H4.5L7 2Z" fill="#d4af37"/>
-              <path d="M5 14H19V20C19 21.1046 18.1046 22 17 22H7C5.89543 22 5 21.1046 5 20V14Z" fill="#d4af37"/>
-              <path d="M4.5 12H19.5L19 14H5L4.5 12Z" fill="#e9c555"/>
-              <path d="M9 16V20M12 16V20M15 16V20" stroke="white" stroke-width="1.5" stroke-linecap="round"/>
-            </svg>
-            JK CHOPP
-          </a>
+         <a href="#" class="text-2xl font-bold gold-text flex items-center">
+  <img src="jk-logo.png" alt="JK CHOPP" class="w-10 h-10 object-contain mr-2 rounded-full">
+  JK CHOPP
+</a>
           <p class="text-gray-400 mt-2">O melhor chopp da região!</p>
         </div>
         
         <div class="flex space-x-4">
-          <a href="https://wa.me/5518996305019." class="w-10 h-10 bg-[#d4af37] bg-opacity-20 rounded-full flex items-center justify-center hover:bg-opacity-30 transition-all">
+          <a href="https://wa.me/5518996305019" class="w-10 h-10 bg-[#d4af37] bg-opacity-20 rounded-full flex items-center justify-center hover:bg-opacity-30 transition-all">
             <i class="fab fa-whatsapp text-[#d4af37]"></i>
           </a>
           <a href="https://instagram.com/jkchopp" target="_blank" class="w-10 h-10 bg-[#d4af37] bg-opacity-20 rounded-full flex items-center justify-center hover:bg-opacity-30 transition-all">
             <i class="fab fa-instagram text-[#d4af37]"></i>
           </a>
-          <a href="mailto:jkchopp@gmail.com" class="w-10 h-10 bg-[#d4af37] bg-opacity-20 rounded-full flex items-center justify-center hover:bg-opacity-30 transition-all">
+          <a href="mailto:www.jkchopp@gmail.com" class="w-10 h-10 bg-[#d4af37] bg-opacity-20 rounded-full flex items-center justify-center hover:bg-opacity-30 transition-all">
             <i class="fas fa-envelope text-[#d4af37]"></i>
           </a>
         </div>
       </div>
       
       <div class="border-t border-gray-800 mt-8 pt-8 text-center">
-        <p class="text-gray-400">JK CHOPP © 2025 - Todos os direitos reservados.</p>
-        <p class="text-gray-500 text-sm mt-2">Beba com moderação. Não compartilhe com menores de 18 anos.</p>
-      </div>
+  <div class="border-t border-gray-800 mt-8 pt-8 text-center">
+  <p class="text-gray-400">JK CHOPP © 2025 - Todos os direitos reservados.</p>
+
+  <p class="text-gray-400 mt-2">
+  Rua América do Sul, Nº 945 | Jardim Brasília, Araçatuba - SP | CEP 16025-600
+  </p>
+
+  <p class="text-gray-500 text-sm mt-2">Beba com moderação. Não compartilhe com menores de 18 anos.</p>
+</div>
+</div>
     </div>
   </footer>
 
