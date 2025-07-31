@@ -1,6 +1,8 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
+  <!-- Swiper CSS -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>JK Chopp</title>
@@ -70,14 +72,14 @@
     }
     
     .whatsapp-btn {
-      background-color: #25d366;
-      transition: all 0.3s ease;
-    }
-    
-    .whatsapp-btn:hover {
-      background-color: #1da851;
-      transform: scale(1.05);
-    }
+  background-color: #1ebe5d; /* verde mais escuro */
+  transition: all 0.3s ease;
+}
+
+.whatsapp-btn:hover {
+  background-color: #189d4c; /* também escurecido */
+  transform: scale(1.05);
+}
     
     .nav-link {
       position: relative;
@@ -148,6 +150,64 @@
       transform: translateX(0);
     }
   </style>
+  <style>
+.faq-container {
+  max-width: 800px;
+  margin: 40px auto;
+  padding: 0 20px;
+  font-family: sans-serif;
+  color: #fff;
+}
+.faq-container h2,
+.faq-container h4 {
+  text-align: center;
+}
+.faq-container h4 {
+  color: #ccc;
+  font-weight: normal;
+  margin-bottom: 30px;
+}
+.faq-card {
+  background-color: #111;
+  border: 1px solid #333;
+  border-radius: 10px;
+  margin-bottom: 15px;
+  overflow: hidden;
+  transition: all 0.3s ease;
+}
+.faq-question {
+  background: none;
+  border: none;
+  color: #ffd700;
+  padding: 20px;
+  text-align: left;
+  width: 100%;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  position: relative;
+}
+.faq-question::after {
+  content: '+';
+  position: absolute;
+  right: 20px;
+  font-size: 20px;
+  color: #ccc;
+}
+.faq-card.active .faq-question::after {
+  content: '–';
+}
+.faq-answer {
+  display: none;
+  padding: 0 20px 20px;
+  font-size: 15px;
+  line-height: 1.6;
+  color: #ddd;
+}
+.faq-card.active .faq-answer {
+  display: block;
+}
+</style>
 </head>
 <body class="relative overflow-x-hidden">
 <!-- Bubbles background effect -->
@@ -224,6 +284,26 @@
   </svg>
 </div>
 </header>
+
+<!-- Sobre Nós -->
+<section id="sobre" class="py-20 px-4 bg-[#0a1520] border-t border-b border-[#d4af37] border-opacity-20">
+  <div class="container mx-auto max-w-4xl text-center">
+    <h2 class="text-3xl md:text-4xl font-bold gold-text mb-6">Quem Somos</h2>
+    <p class="text-gray-300 text-lg leading-relaxed">
+      Fundada em 15 de maio de 2025, em Araçatuba-SP, a JK Chopp nasceu com o compromisso de oferecer um produto de excelência e um atendimento que conquista pela confiança, respeito e profissionalismo.
+      <br><br>
+      Nosso chopp segue rigorosos padrões de qualidade — da fabricação ao transporte e armazenamento — garantindo frescor, sabor e consistência até chegar a você.
+      <br><br>
+      Com dedicação, responsabilidade e carinho, buscamos diariamente aprimorar nossos processos, pois entendemos que atender bem é a nossa razão de existir. Somos guiados por princípios sólidos e diretrizes firmes, que nos impulsionam a superar desafios e alcançar novos patamares.
+      <br><br>
+      Contamos com uma equipe especializada, preparada para oferecer atendimento de alto padrão, com segurança, eficiência e diferenciais que nos destacam no mercado.
+      <br><br>
+      Acreditamos que quando se trabalha com paixão, a qualidade se transforma no combustível que impulsiona a excelência e fortalece a nossa jornada.
+      <br><br>
+      <strong class="text-white font-bold">JK Chopp.</strong> Tradição, qualidade e confiança para eventos, bares e pontos de venda. Faça parte dessa experiência.
+    </p>
+  </div>
+</section>
 
   <!-- Catalog Section -->
   <section id="catalogo" class="py-20 px-4">
@@ -526,44 +606,209 @@
     </div>
   </section>
 
-  <!-- Footer -->
-  <footer class="bg-[#060d13] py-10 px-4 border-t border-[#d4af37] border-opacity-30">
-    <div class="container mx-auto">
-      <div class="flex flex-col md:flex-row justify-between items-center">
-        <div class="mb-6 md:mb-0">
-         <a href="#" class="text-2xl font-bold gold-text flex items-center">
-  <img src="jk-logo.png" alt="JK CHOPP" class="w-10 h-10 object-contain mr-2 rounded-full">
-  JK CHOPP
-</a>
-          <p class="text-gray-400 mt-2">O melhor chopp da região!</p>
-        </div>
-        
-        <div class="flex space-x-4">
-          <a href="https://wa.me/5518996305019" class="w-10 h-10 bg-[#d4af37] bg-opacity-20 rounded-full flex items-center justify-center hover:bg-opacity-30 transition-all">
-            <i class="fab fa-whatsapp text-[#d4af37]"></i>
-          </a>
-          <a href="https://instagram.com/jkchopp" target="_blank" class="w-10 h-10 bg-[#d4af37] bg-opacity-20 rounded-full flex items-center justify-center hover:bg-opacity-30 transition-all">
-            <i class="fab fa-instagram text-[#d4af37]"></i>
-          </a>
-          <a href="mailto:www.jkchopp@gmail.com" class="w-10 h-10 bg-[#d4af37] bg-opacity-20 rounded-full flex items-center justify-center hover:bg-opacity-30 transition-all">
-            <i class="fas fa-envelope text-[#d4af37]"></i>
-          </a>
+<!-- Missão, Visão e Valores -->
+<section class="py-20 px-4 bg-[#0a1520] border-t border-[#d4af37] border-opacity-30">
+  <div class="container mx-auto max-w-4xl text-center">
+    <h2 class="text-3xl md:text-4xl font-bold gold-text mb-10">Nossa Essência</h2>
+    
+    <div class="mb-10">
+      <h3 class="text-2xl font-semibold gold-text mb-4">Missão</h3>
+      <p class="text-gray-300 text-lg">
+        Oferecer produtos de qualidade reconhecida, com distribuição eficiente e serviços que superem expectativas.
+        Buscamos sempre o crescimento sustentável, gerando prosperidade para a sociedade e valorização real dos nossos colaboradores.
+      </p>
+    </div>
+
+    <div class="mb-10">
+      <h3 class="text-2xl font-semibold gold-text mb-4">Visão</h3>
+      <p class="text-gray-300 text-lg">
+        Ser reconhecida como a principal referência em chopp no interior paulista — e futuramente em todo o Brasil —
+        oferecendo condições exemplares de trabalho, respeito ao cliente e paixão em cada entrega.
+      </p>
+    </div>
+
+    <div>
+      <h3 class="text-2xl font-semibold gold-text mb-4">Valores</h3>
+      <p class="text-gray-300 text-lg leading-relaxed">
+        Trabalho com propósito • Comprometimento genuíno • Integridade em cada ação <br />
+        Respeito acima de tudo • Relacionamento próximo e humano <br />
+        Simplicidade com eficiência • Perseverança diária • Carinho em tudo o que fazemos
+      </p>
+    </div>
+  </div>
+</section>
+
+<!-- Quanto Chopp Pedir -->
+<section class="py-20 px-4 bg-[#0a1520] border-t border-[#d4af37] border-opacity-20">
+  <div class="container mx-auto max-w-4xl text-center">
+    <h2 class="text-3xl md:text-4xl font-bold gold-text mb-8">🍻 Quanto chopp pedir para sua festa?</h2>
+    
+    <p class="text-gray-300 mb-6 text-lg">
+      Dica da JK Chopp
+    </p>
+
+    <div class="text-left space-y-6 text-gray-300">
+      <div>
+        <h3 class="text-xl font-bold gold-text mb-2">✅ Consumo por pessoa</h3>
+        <p>• Festas com público que bebe bem: <strong>2 a 2,5L por pessoa</strong> (evento de 4–5 horas)<br>
+        • Consumo mais leve ou com outras bebidas: <strong>1,5L por pessoa</strong></p>
+      </div>
+
+      <div>
+        <h3 class="text-xl font-bold gold-text mb-2">🛢️ Capacidade por barril</h3>
+        <table class="w-full text-left text-sm border border-[#d4af37]">
+          <thead class="bg-[#d4af37] text-black font-bold">
+            <tr><th class="p-2">Barril</th><th class="p-2">Serve até</th></tr>
+          </thead>
+          <tbody>
+            <tr class="border-t border-[#d4af37]"><td class="p-2">30 litros</td><td class="p-2">15 pessoas</td></tr>
+            <tr class="border-t border-[#d4af37]"><td class="p-2">50 litros</td><td class="p-2">25 pessoas</td></tr>
+          </tbody>
+        </table>
+        <p class="mt-2 text-sm italic">Baseado em consumo de 2L por pessoa em festas animadas!</p>
+      </div>
+
+      <div>
+        <h3 class="text-xl font-bold gold-text mb-2">🎉 Exemplo prático</h3>
+        <ul class="list-disc list-inside">
+          <li>30 pessoas → 60L → 2 barris de 30L ou 1 de 50L + 1 de 30L</li>
+          <li>100 pessoas → 200L → 4 barris de 50L</li>
+          <li>150 pessoas → 300L → 6 barris de 50L</li>
+        </ul>
+      </div>
+
+      <div>
+        <h3 class="text-xl font-bold gold-text mb-2">🌡️ Leve em conta:</h3>
+        <ul class="list-disc list-inside">
+          <li>Quanto mais quente, mais se bebe</li>
+          <li>Música boa anima a galera</li>
+          <li>Sempre tem um grupo que bebe o dobro</li>
+        </ul>
+      </div>
+      <div class="text-center mt-10">
+        <p class="text-lg font-semibold">🚚 E se acabar?</p>
+        <p class="text-gray-300 mt-1">A JK Chopp leva o mais rápido para você! Fale com a gente e calculamos a medida certa. 😉</p>
+        <a href="https://wa.me/5518996305019?text=Olá,%20gostaria%20de%20ajuda%20para%20calcular%20a%20quantidade%20de%20chopp!" 
+           class="whatsapp-btn inline-flex items-center mt-4 px-6 py-3 rounded-full text-white font-bold shadow-lg">
+          <i class="fab fa-whatsapp mr-2 text-xl"></i>
+          Calcular com a gente
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- Parceiros -->
+<section class="py-20 px-4 bg-[#0a1520] border-t border-[#d4af37] border-opacity-20">
+  <div class="container mx-auto max-w-6xl text-center">
+    <h2 class="text-3xl md:text-4xl font-bold gold-text mb-10">Nossos Parceiros</h2>
+    <p class="text-gray-300 mb-10 max-w-2xl mx-auto">Temos orgulho em contar com a confiança de empresas e profissionais que compartilham dos mesmos valores de qualidade e compromisso.</p>
+
+    <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-6">
+      <!-- Parceiro 1 -->
+      <div class="bg-[#091118] p-4 rounded-xl shadow-lg hover:shadow-xl transition-all">
+        <img src="parceiro1.jpg" alt="Parceiro 1" class="rounded-full w-24 h-24 object-cover mx-auto mb-4 border border-[#d4af37]">
+        <p class="text-white font-semibold">Bar do Zé</p>
+      </div>
+
+      <!-- Parceiro 2 -->
+      <div class="bg-[#091118] p-4 rounded-xl shadow-lg hover:shadow-xl transition-all">
+        <img src="parceiro2.jpg" alt="Parceiro 2" class="rounded-full w-24 h-24 object-cover mx-auto mb-4 border border-[#d4af37]">
+        <p class="text-white font-semibold">Churrasquinho da Lú</p>
+      </div>
+
+      <!-- Parceiro 3 -->
+      <div class="bg-[#091118] p-4 rounded-xl shadow-lg hover:shadow-xl transition-all">
+        <img src="parceiro3.jpg" alt="Parceiro 3" class="rounded-full w-24 h-24 object-cover mx-auto mb-4 border border-[#d4af37]">
+        <p class="text-white font-semibold">Buffet Estação</p>
+      </div>
+
+      <!-- Parceiro 4 -->
+      <div class="bg-[#091118] p-4 rounded-xl shadow-lg hover:shadow-xl transition-all">
+        <img src="parceiro4.jpg" alt="Parceiro 4" class="rounded-full w-24 h-24 object-cover mx-auto mb-4 border border-[#d4af37]">
+        <p class="text-white font-semibold">Espaço Eventos</p>
+      </div>
+    </div>
+  </div>
+</section>
+<section id="section-651860ffca751" class="s123-module s123-module-faq layout-4" data-module-id="651860ffca751" data-module-type-num="30" data-overlay-opacity="true">
+  <div class="container-fluid page_header_style noBackground" data-aos="fade-up">
+    <div class="row">
+      <div class="container moduleTitleContainer">
+        <div class="row modulesTitle text-center">
+          <div class="col-xs-12">
+            <div class="page-header-wrap">
+              <div class="three-dots"><span></span><span></span><span></span></div>
+            </div>
+            </div>
+          </div>
         </div>
       </div>
-      
-      <div class="border-t border-gray-800 mt-8 pt-8 text-center">
-  <div class="border-t border-gray-800 mt-8 pt-8 text-center">
-  <p class="text-gray-400">JK CHOPP © 2025 - Todos os direitos reservados.</p>
-
-  <p class="text-gray-400 mt-2">
-  Rua América do Sul, Nº 945 | Jardim Brasília, Araçatuba - SP | CEP 16025-600
-  </p>
-
-  <p class="text-gray-500 text-sm mt-2">Beba com moderação. Não compartilhe com menores de 18 anos.</p>
-</div>
-</div>
     </div>
-  </footer>
+  </div>
+<div class="faq-container">
+  <h2>soluções práticas para sua chopeira!</h2>
+  <h4>Vamos ajudar você a desfrutar do seu chopp com tranquilidade.</h4>
+
+  <div class="faq-card">
+    <button class="faq-question">SE SÓ SAI ESPUMA:</button>
+    <div class="faq-answer">
+      <p>Se a sua chopeira está produzindo excesso de espuma, existem algumas causas comuns para isso. A primeira dica é observar a pressão do manômetro, que deve estar entre 2 e 2,5 Kgf. Verifique também se não há torniquetes (dobras) nas mangueiras ou se não há bolhas de ar na mangueira. Lembrando que durante a instalação nossos técnicos fazem todas as verificações necessárias na pressão do gás para evitar problemas; mas qualquer equipamento está sujeito a defeitos no funcionamento. Diminuímos esses riscos com manutenção preventiva periódica.</p>
+    </div>
+  </div>
+
+  <div class="faq-card">
+    <button class="faq-question">SE A CHOPEIRA NÃO FUNCIONA:</button>
+    <div class="faq-answer">
+      <p>Se a chopeira não estiver funcionando, o primeiro passo é verificar se o plugue está corretamente conectado na tomada. Verifique se a voltagem está correta e se o disjuntor está acionado. Esses cuidados simples podem resolver o problema.</p>
+    </div>
+  </div>
+
+  <div class="faq-card">
+    <button class="faq-question">SE O CHOPP NÃO SAI:</button>
+    <div class="faq-answer">
+      <p>Se o chopp não estiver saindo, pode ser necessário verificar algumas coisas. Primeiramente, veja se o cilindro de gás está aberto e se o mecanismo de controle de vazão da torneira também está aberto. Cheque se ainda há chopp no barril e se a válvula extratora está na posição correta. Para checar se o chopp está congelado, retire a chopeira da fonte de energia por trinta minutos e no meio tempo tente retirar o chopp na torneira. Assim que o chopp sair, religue a chopeira na tomada.</p>
+    </div>
+  </div>
+
+  <div class="faq-card">
+  <button class="faq-question">A CHOPEIRA CHEGA ATÉ VOCÊ PRONTA PARA USO?</button>
+  <div class="faq-answer">
+    <p>Sim! A JK Chopp entrega tudo pronto: chopeira instalada, cilindro testado, tudo regulado. Só ligar e aproveitar.</p>
+    <p>Se mesmo assim houver algum problema, temos técnico plantonista para suporte presencial. Nosso objetivo é que você aproveite seu chopp sem preocupações.</p>
+    <p>Esperamos que tenha gostado das nossas dicas e que seu chopp continue sempre gelado e de qualidade. Até a próxima!</p>
+  </div>
+</div>
+        <!-- Footer -->
+  <!-- Footer -->
+<footer class="bg-[#060d13] py-10 px-4 border-t border-[#d4af37] border-opacity-30 w-full">
+  <div class="max-w-[1440px] mx-auto flex flex-col md:flex-row justify-between items-center w-full px-4 lg:px-20">
+    <div class="mb-6 md:mb-0 text-center md:text-left">
+      <a href="#" class="text-2xl font-bold gold-text flex items-center justify-center md:justify-start">
+        <img src="jk-logo.png" alt="JK CHOPP" class="w-10 h-10 object-contain mr-2 rounded-full">
+        JK CHOPP
+      </a>
+      <p class="text-gray-400 mt-2">O melhor chopp da região!</p>
+    </div>
+
+    <div class="flex space-x-4">
+      <a href="https://wa.me/5518996305019" class="w-10 h-10 bg-[#d4af37] bg-opacity-20 rounded-full flex items-center justify-center hover:bg-opacity-30 transition-all">
+        <i class="fab fa-whatsapp text-[#d4af37]"></i>
+      </a>
+      <a href="https://instagram.com/jkchopp" target="_blank" class="w-10 h-10 bg-[#d4af37] bg-opacity-20 rounded-full flex items-center justify-center hover:bg-opacity-30 transition-all">
+        <i class="fab fa-instagram text-[#d4af37]"></i>
+      </a>
+      <a href="mailto:jkchopp@gmail.com" class="w-10 h-10 bg-[#d4af37] bg-opacity-20 rounded-full flex items-center justify-center hover:bg-opacity-30 transition-all">
+        <i class="fas fa-envelope text-[#d4af37]"></i>
+      </a>
+    </div>
+  </div>
+
+  <div class="border-t border-gray-800 mt-8 pt-8 text-center w-full px-4 lg:px-20">
+    <p class="text-gray-400">JK CHOPP © 2025 - Todos os direitos reservados.</p>
+    <p class="text-gray-400 mt-2">Rua América do Sul, Nº 945 | Jardim Brasília, Araçatuba - SP | CEP 16025-600</p>
+    <p class="text-gray-500 text-sm mt-2">Beba com moderação. Não compartilhe com menores de 18 anos.</p>
+  </div>
+</footer>
 
   <script>
     // Mobile menu toggle
@@ -657,9 +902,23 @@
         }
       });
     }
-    
     window.addEventListener('scroll', highlightActiveSection);
     window.addEventListener('load', highlightActiveSection);
   </script>
-<script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'9637015e77b34d0f',t:'MTc1MzIyOTk1Ny4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body>
+<script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'9637015e77b34d0f',t:'MTc1MzIyOTk1Ny4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script><script>
+  const cards = document.querySelectorAll('.faq-card');
+
+  cards.forEach(card => {
+    const question = card.querySelector('.faq-question');
+    question.addEventListener('click', () => {
+      // fecha todos
+      cards.forEach(c => c.classList.remove('active'));
+      // ativa o clicado se ainda não estiver ativo
+      if (!card.classList.contains('active')) {
+        card.classList.add('active');
+      }
+    });
+  });
+</script>
+</body>
 </html>
