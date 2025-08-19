@@ -110,4 +110,50 @@ footer {
   overflow: hidden;
   z-index: 0;
 }
-
+<style>
+.faq-section {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 40px 20px;
+  color: #fff;
+  font-family: sans-serif;
+}
+.faq-section h2 {
+  text-align: center;
+  margin-bottom: 10px;
+}
+.faq-section h4 {
+  text-align: center;
+  font-weight: normal;
+  margin-bottom: 30px;
+  color: #ccc;
+}
+.faq-item {
+  border-bottom: 1px solid #555;
+  padding: 15px 0;
+}
+.faq-question {
+  font-size: 18px;
+  font-weight: bold;
+  cursor: pointer;
+  position: relative;
+}
+.faq-question::after {
+  content: '+';
+  position: absolute;
+  right: 0;
+}
+.faq-answer {
+  display: none;
+  margin-top: 10px;
+  font-size: 15px;
+  line-height: 1.6;
+  color: #ddd;
+}
+.faq-item.open .faq-answer {
+  display: block;
+}
+.faq-item.open .faq-question::after {
+  content: '-';
+}
+</style>
