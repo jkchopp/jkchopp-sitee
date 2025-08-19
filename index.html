@@ -697,39 +697,75 @@
     </div>
   </div>
 </section>
-<!-- Parceiros -->
-<section class="py-20 px-4 bg-[#0a1520] border-t border-[#d4af37] border-opacity-20">
+<!-- Parceiros (Carrossel) -->
+<section class="py-20 px-4 bg-[#0a1520] border-t border-[#d4af37] border-opacity-20 relative z-10">
   <div class="container mx-auto max-w-6xl text-center">
-    <h2 class="text-3xl md:text-4xl font-bold gold-text mb-10">Nossos Parceiros</h2>
-    <p class="text-gray-300 mb-10 max-w-2xl mx-auto">Temos orgulho em contar com a confiança de empresas e profissionais que compartilham dos mesmos valores de qualidade e compromisso.</p>
+    <h2 class="text-3xl md:text-4xl font-bold gold-text mb-6">Nossos Parceiros</h2>
+    <p class="text-gray-300 mb-10 max-w-2xl mx-auto">
+      Temos orgulho em contar com a confiança de empresas e profissionais que compartilham dos mesmos valores de qualidade e compromisso.
+    </p>
 
-    <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-6">
-      <!-- Parceiro 1 -->
-      <div class="bg-[#091118] p-4 rounded-xl shadow-lg hover:shadow-xl transition-all">
-        <img src="parceiro1.jpg" alt="Parceiro 1" class="rounded-full w-24 h-24 object-cover mx-auto mb-4 border border-[#d4af37]">
-        <p class="text-white font-semibold">Bar do Zé</p>
+    <!-- Swiper -->
+    <div class="swiper partners-swiper pb-10">
+      <div class="swiper-wrapper">
+
+        <!-- Slide 1 -->
+        <div class="swiper-slide">
+          <div class="bg-[#091118] p-6 rounded-xl shadow-lg hover:shadow-xl transition-all">
+            <img src="macauba.png" alt="Macaúba restaurante e Choperia"
+                 class="w-24 h-24 object-cover rounded-full mx-auto mb-4 border-2 border-[#d4af37] bg-black">
+            <p class="text-white font-semibold">Macaúba restaurante e Choperia</p>
+          </div>
+        </div>
+
+        <!-- Slide 2 -->
+        <div class="swiper-slide">
+          <div class="bg-[#091118] p-6 rounded-xl shadow-lg hover:shadow-xl transition-all">
+            <img src="vitrola.png" alt="Vitrola Vintage Bar"
+                 class="w-24 h-24 object-cover rounded-full mx-auto mb-4 border-2 border-[#d4af37] bg-black">
+            <p class="text-white font-semibold">Vitrola Vintage Bar</p>
+          </div>
+        </div>
+
+        <!-- Slide 3 -->
+        <div class="swiper-slide">
+          <div class="bg-[#091118] p-6 rounded-xl shadow-lg hover:shadow-xl transition-all">
+            <img src="dbb.png" alt="DBB"
+                 class="w-24 h-24 object-cover rounded-full mx-auto mb-4 border-2 border-[#d4af37] bg-black">
+            <p class="text-white font-semibold">DBB</p>
+          </div>
+        </div>
+
+        <!-- Slide 4 -->
+        <div class="swiper-slide">
+          <div class="bg-[#091118] p-6 rounded-xl shadow-lg hover:shadow-xl transition-all">
+            <img src="rooster.png" alt="Rooster King Delivery e Petiscaria"
+                 class="w-24 h-24 object-cover rounded-full mx-auto mb-4 border-2 border-[#d4af37] bg-black">
+            <p class="text-white font-semibold">Rooster King Delivery e Petiscaria</p>
+          </div>
+        </div>
+
+        <!-- Slide 5 -->
+        <div class="swiper-slide">
+          <div class="bg-[#091118] p-6 rounded-xl shadow-lg hover:shadow-xl transition-all">
+            <img src="espetojussara.png" alt="Espetaria Ki Espeto"
+                 class="w-24 h-24 object-cover rounded-full mx-auto mb-4 border-2 border-[#d4af37] bg-black">
+            <p class="text-white font-semibold">Espetaria Ki Espeto</p>
+          </div>
+        </div>
+
       </div>
 
-      <!-- Parceiro 2 -->
-      <div class="bg-[#091118] p-4 rounded-xl shadow-lg hover:shadow-xl transition-all">
-        <img src="parceiro2.jpg" alt="Parceiro 2" class="rounded-full w-24 h-24 object-cover mx-auto mb-4 border border-[#d4af37]">
-        <p class="text-white font-semibold">Churrasquinho da Lú</p>
-      </div>
+      <!-- Paginação (bolinhas) -->
+      <div class="swiper-pagination"></div>
 
-      <!-- Parceiro 3 -->
-      <div class="bg-[#091118] p-4 rounded-xl shadow-lg hover:shadow-xl transition-all">
-        <img src="parceiro3.jpg" alt="Parceiro 3" class="rounded-full w-24 h-24 object-cover mx-auto mb-4 border border-[#d4af37]">
-        <p class="text-white font-semibold">Buffet Estação</p>
-      </div>
-
-      <!-- Parceiro 4 -->
-      <div class="bg-[#091118] p-4 rounded-xl shadow-lg hover:shadow-xl transition-all">
-        <img src="parceiro4.jpg" alt="Parceiro 4" class="rounded-full w-24 h-24 object-cover mx-auto mb-4 border border-[#d4af37]">
-        <p class="text-white font-semibold">Espaço Eventos</p>
-      </div>
+      <!-- Setas -->
+      <div class="swiper-button-prev"></div>
+      <div class="swiper-button-next"></div>
     </div>
   </div>
 </section>
+
 <section id="section-651860ffca751" class="s123-module s123-module-faq layout-4" data-module-id="651860ffca751" data-module-type-num="30" data-overlay-opacity="true">
   <div class="container-fluid page_header_style noBackground" data-aos="fade-up">
     <div class="row">
@@ -784,7 +820,7 @@
   <div class="max-w-[1440px] mx-auto flex flex-col md:flex-row justify-between items-center w-full px-4 lg:px-20">
     <div class="mb-6 md:mb-0 text-center md:text-left">
       <a href="#" class="text-2xl font-bold gold-text flex items-center justify-center md:justify-start">
-        <img src="jk-logo.png" alt="JK CHOPP" class="w-10 h-10 object-contain mr-2 rounded-full">
+        <img src="jk-logo.png" alt="JK CHOPP" class="w-12 h-12 object-contain mr-2 rounded-full">
         JK CHOPP
       </a>
       <p class="text-gray-400 mt-2">O melhor chopp da região!</p>
@@ -918,6 +954,34 @@
         card.classList.add('active');
       }
     });
+  });
+</script>
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+<script>
+  const partnersSwiper = new Swiper('.partners-swiper', {
+    loop: true,
+    speed: 600,
+    spaceBetween: 20,
+    autoplay: {
+      delay: 2500,
+      disableOnInteraction: false,
+    },
+    // Quantidade de cards visíveis conforme a tela
+    slidesPerView: 1.2,
+    breakpoints: {
+      640: { slidesPerView: 2.2, spaceBetween: 20 },
+      768: { slidesPerView: 3,   spaceBetween: 24 },
+      1024:{ slidesPerView: 4,   spaceBetween: 24 },
+    },
+    // Navegação e paginação
+    pagination: {
+      el: '.partners-swiper .swiper-pagination',
+      clickable: true,
+    },
+    navigation: {
+      nextEl: '.partners-swiper .swiper-button-next',
+      prevEl: '.partners-swiper .swiper-button-prev',
+    },
   });
 </script>
 </body>
