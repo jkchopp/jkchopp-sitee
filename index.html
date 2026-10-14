@@ -6,7 +6,7 @@
 <meta name="theme-color" content="#08131b">
 <meta name="color-scheme" content="dark">
 <title>JK CHOPP | Chopp para Festas e Eventos em Araçatuba</title>
-<meta name="description" content="Conheça a linha tradicional e especial da JK CHOPP. Chopp para festas, eventos e estabelecimentos em Araçatuba e região. Consulte disponibilidade e solicite seu orçamento.">
+<meta name="description" content="Chopp para festas, eventos e estabelecimentos em Araçatuba e região. A JK CHOPP também oferece instalação, manutenção, assepsia e assistência técnica para chopeiras e sistemas de chopp.">
 <meta property="og:type" content="website">
 <meta property="og:title" content="JK CHOPP — Chopp para seus melhores momentos">
 <meta property="og:description" content="Conheça os 14 chopps tradicionais e especiais. Fornecimento para eventos em Araçatuba e região.">
@@ -54,6 +54,25 @@
 @media(max-width:1050px){.partner{flex-basis:calc((100% - 32px)/3)}}
 @media(max-width:780px){.partner{flex-basis:calc((100% - 16px)/2)}.carousel-arrow{width:38px;height:38px;flex-basis:38px}}
 @media(max-width:520px){.partner{flex-basis:78%;max-width:240px}.partners-carousel-area{gap:0}.carousel-arrow{display:none}}
+/* Serviços técnicos */
+.services-section{background:radial-gradient(circle at 88% 18%,rgba(212,175,55,.08),transparent 28%),#0b1922}
+.services-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:16px}
+.service-card{position:relative;overflow:hidden;min-height:290px;padding:29px 25px 27px;display:flex;flex-direction:column;background:linear-gradient(145deg,rgba(21,40,50,.97),rgba(12,28,37,.97));border:1px solid rgba(255,255,255,.08);border-radius:20px;transition:transform .25s ease,border-color .25s ease,box-shadow .25s ease}
+.service-card:before{content:'';position:absolute;top:0;left:0;right:0;height:2px;background:linear-gradient(90deg,transparent,rgba(212,175,55,.85),transparent);opacity:.55}
+.service-card:hover{transform:translateY(-4px);border-color:rgba(212,175,55,.38);box-shadow:0 18px 40px rgba(0,0,0,.22)}
+.service-number{position:absolute;right:20px;top:14px;font-family:'Plus Jakarta Sans',Inter,sans-serif;font-size:2.5rem;line-height:1;font-weight:800;color:rgba(212,175,55,.07)}
+.service-icon{width:45px;height:45px;display:grid;place-items:center;margin-bottom:25px;border-radius:13px;background:rgba(212,175,55,.10);border:1px solid rgba(212,175,55,.20);color:var(--gold-bright);font-size:1.25rem}
+.service-card h3{margin:0 0 11px;font-size:1.08rem;color:var(--text)}
+.service-card p{margin:0;font-size:.86rem;line-height:1.7;color:var(--muted)}
+.services-cta{margin-top:24px;padding:29px 32px;display:flex;justify-content:space-between;align-items:center;gap:30px;border-radius:20px;border:1px solid rgba(212,175,55,.22);background:linear-gradient(120deg,#152933,#0d2029)}
+.services-cta-text{max-width:650px}
+.services-cta-label{display:block;margin-bottom:7px;text-transform:uppercase;letter-spacing:.16em;font-size:.66rem;font-weight:800;color:var(--gold-bright)}
+.services-cta h3{margin:0 0 7px;font-size:1.35rem;color:var(--text)}
+.services-cta p{margin:0;font-size:.87rem}
+.services-note{margin:14px 3px 0;font-size:.75rem;color:#82939d}
+@media(max-width:1050px){.services-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:650px){.services-grid{grid-template-columns:1fr}.service-card{min-height:auto}.services-cta{flex-direction:column;align-items:flex-start;padding:24px}.services-cta .btn{width:100%;white-space:normal;text-align:center}}
+
 /* Bolhas suaves acima do fundo e atrás dos controles */
 #bubbles-container{position:fixed;inset:0;z-index:25;overflow:hidden;pointer-events:none;contain:layout style;isolation:isolate}
 .beer-bubble{position:absolute;bottom:-55px;border-radius:50%;background:rgba(218,233,238,.22);border:1px solid rgba(255,255,255,.08);opacity:0;animation:jkBubbleRise linear infinite;box-shadow:inset 0 0 9px rgba(255,255,255,.06)}
@@ -65,9 +84,9 @@
 <div id="bubbles-container" aria-hidden="true"></div>
 <header class="site-header"><div class="wrap nav">
 <a href="#inicio" class="identity" aria-label="JK CHOPP — ir ao início"><img src="jk-logo.png" alt="" width="47" height="47"><span class="wordmark">JK CHOPP</span></a>
-<nav class="nav-links" aria-label="Navegação principal"><a href="#catalogo">Chopps</a><a href="#como-funciona">Como funciona</a><a href="#calculadora">Sua festa</a><a href="#parceiros">Parceiros</a><a href="#contato">Contato</a></nav>
+<nav class="nav-links" aria-label="Navegação principal"><a href="#catalogo">Chopps</a><a href="#como-funciona">Como funciona</a><a href="#calculadora">Sua festa</a><a href="#servicos">Serviços</a><a href="#parceiros">Parceiros</a><a href="#contato">Contato</a></nav>
 <div class="nav-right"><a class="btn btn-gold btn-sm" href="#catalogo">Ver catálogo <span aria-hidden="true">↗</span></a><button type="button" id="menu-toggle" class="menu-toggle" aria-controls="mobile-menu" aria-expanded="false" aria-label="Abrir menu">☰</button></div>
-</div><nav id="mobile-menu" class="mobile-links" aria-label="Navegação no celular" hidden><a href="#catalogo">Conhecer os chopps</a><a href="#como-funciona">Como funciona</a><a href="#calculadora">Calcular quantidade</a><a href="#parceiros">Parceiros</a><a href="#sobre">Sobre nós</a><a href="#contato">Contato e localização</a></nav></header>
+</div><nav id="mobile-menu" class="mobile-links" aria-label="Navegação no celular" hidden><a href="#catalogo">Conhecer os chopps</a><a href="#como-funciona">Como funciona</a><a href="#calculadora">Calcular quantidade</a><a href="#servicos">Serviços técnicos</a><a href="#parceiros">Parceiros</a><a href="#sobre">Sobre nós</a><a href="#contato">Contato e localização</a></nav></header>
 <main>
 <section class="hero" id="inicio"><div class="wrap hero-grid"><div>
 <p class="eyebrow">Chopp para eventos • Araçatuba e região</p><h1>Seu momento merece um <em>chopp à altura.</em></h1>
@@ -215,6 +234,50 @@
 <div class="gallery-slot"><span aria-hidden="true">02 /</span><strong>Produtos selecionados</strong><p>Opções tradicionais e especiais para diferentes gostos.</p></div>
 <div class="gallery-slot"><span aria-hidden="true">03 /</span><strong>Atendimento e logística</strong><p>Organização dos detalhes de entrega e instalação contratadas.</p></div>
 </div></div></section>
+<section class="section services-section" id="servicos">
+  <div class="wrap">
+    <div class="section-head">
+      <p class="eyebrow">Especialização JK</p>
+      <h2>Serviços técnicos para <span class="gold">sistemas de chopp.</span></h2>
+      <p>Além do fornecimento de chopp, a JK CHOPP conta com experiência técnica para instalação, manutenção, higienização e correção de sistemas de extração.</p>
+    </div>
+    <div class="services-grid">
+      <article class="service-card">
+        <div class="service-number">01</div>
+        <div class="service-icon" aria-hidden="true">◇</div>
+        <h3>Instalação de chopeiras</h3>
+        <p>Instalação e preparação de chopeiras tradicionais e sistemas especiais, com atenção à montagem e ao funcionamento adequado do conjunto.</p>
+      </article>
+      <article class="service-card">
+        <div class="service-number">02</div>
+        <div class="service-icon" aria-hidden="true">⚙</div>
+        <h3>Manutenção técnica</h3>
+        <p>Avaliação e manutenção preventiva ou corretiva de chopeiras, linhas e componentes do sistema de extração.</p>
+      </article>
+      <article class="service-card">
+        <div class="service-number">03</div>
+        <div class="service-icon" aria-hidden="true">✦</div>
+        <h3>Assepsia e higienização</h3>
+        <p>Limpeza técnica de chopeiras, mangueiras, torneiras e linhas para manter o sistema em boas condições de funcionamento e utilização.</p>
+      </article>
+      <article class="service-card">
+        <div class="service-number">04</div>
+        <div class="service-icon" aria-hidden="true">⌁</div>
+        <h3>Diagnóstico e consertos</h3>
+        <p>Identificação de falhas, vazamentos, problemas de pressão, refrigeração e outros defeitos relacionados ao funcionamento do sistema.</p>
+      </article>
+    </div>
+    <div class="services-cta">
+      <div class="services-cta-text">
+        <span class="services-cta-label">Atendimento técnico</span>
+        <h3>Seu equipamento precisa de atendimento?</h3>
+        <p>Conte para nossa equipe o que está acontecendo e consulte a disponibilidade para avaliação do serviço.</p>
+      </div>
+      <a class="btn btn-gold" href="https://wa.me/5518996305019?text=Ol%C3%A1%21%20Gostaria%20de%20solicitar%20um%20atendimento%20t%C3%A9cnico%20para%20uma%20chopeira%20ou%20sistema%20de%20chopp." target="_blank" rel="noopener noreferrer">Solicitar atendimento técnico <span aria-hidden="true">↗</span></a>
+    </div>
+    <p class="services-note">Serviços sujeitos à avaliação técnica, disponibilidade da equipe, localização e características do equipamento.</p>
+  </div>
+</section>
 <section class="section" id="parceiros">
   <div class="wrap">
 
