@@ -1,0 +1,1495 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <!-- Swiper CSS -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>JK CHOPP | Chopp para Festas e Eventos em Araçatuba</title>
+  <meta name="description" content="Conheça os chopps tradicionais e especiais da JK CHOPP. Fornecimento de chopp para festas e eventos em Araçatuba e região.">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800&family=Russo+One&display=swap');
+    
+    :root {
+      --gold: #d4af37;
+      --dark-blue: #091118;
+      --darker-blue: #060d13;
+      --light-gold: #e9c555;
+    }
+    
+    body {
+      font-family: 'Montserrat', sans-serif;
+      background-color: var(--dark-blue);
+      color: white;
+      line-height: 1.6;
+    }
+    
+    .gold-text {
+      color: var(--gold);
+    }
+    
+    /* Tipografia exclusiva da marca */
+    .brand-title, .brand-title-hero {
+      font-family: 'Russo One', 'Montserrat', sans-serif;
+      text-transform: uppercase;
+      color: var(--gold);
+      font-weight: 400;
+    }
+    .brand-title { letter-spacing: 2px; line-height: 1; }
+    .brand-title-hero { letter-spacing: 2px; line-height: 1.1; font-size: clamp(3rem, 8vw, 6rem); }
+    .instagram-btn { display: inline-flex; align-items: center; justify-content: center; gap: .6rem;
+      border: 1.5px solid var(--gold); color: var(--light-gold); background: rgba(212,175,55,.06);
+      transition: background .2s ease, transform .2s ease; }
+    .instagram-btn:hover { background: rgba(212,175,55,.17); transform: translateY(-2px); }
+    .instagram-btn:focus-visible, .whatsapp-btn:focus-visible, .nav-link:focus-visible { outline: 3px solid #fff; outline-offset: 4px; }
+    @media (prefers-reduced-motion: reduce) { .beer-bubble { animation: none !important; } html { scroll-behavior: auto; } }
+
+    .gold-border {
+      border-color: var(--gold);
+    }
+    
+    .beer-bubble {
+      position: absolute;
+      background-color: rgba(255, 255, 255, 0.6);
+      border-radius: 50%;
+      animation: rise 8s infinite ease-in;
+      opacity: 0;
+    }
+    
+    @keyframes rise {
+      0% {
+        bottom: 0;
+        opacity: 0;
+      }
+      20% {
+        opacity: 0.8;
+      }
+      80% {
+        opacity: 0.6;
+      }
+      100% {
+        bottom: 100%;
+        opacity: 0;
+      }
+    }
+    
+    .beer-card {
+      transition: all 0.3s ease;
+      background: rgba(255, 255, 255, 0.05);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+    }
+    
+    .beer-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+      background: rgba(255, 255, 255, 0.1);
+      border-color: var(--gold);
+    }
+    
+    .whatsapp-btn {
+  background-color: #1ebe5d; /* verde mais escuro */
+  transition: all 0.3s ease;
+}
+
+.whatsapp-btn:hover {
+  background-color: #189d4c; /* também escurecido */
+  transform: scale(1.05);
+}
+    
+    .nav-link {
+      position: relative;
+      transition: all 0.3s ease;
+    }
+    
+    .nav-link::after {
+      content: '';
+      position: absolute;
+      width: 0;
+      height: 2px;
+      bottom: -2px;
+      left: 0;
+      background-color: var(--gold);
+      transition: width 0.3s ease;
+    }
+    
+    .nav-link:hover::after {
+      width: 100%;
+    }
+    
+    .nav-link:hover {
+      color: var(--light-gold);
+    }
+    
+    .service-card {
+      transition: all 0.3s ease;
+    }
+    
+    .service-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+    }
+    
+    .service-card:hover .service-icon {
+      transform: scale(1.1);
+    }
+    
+    .service-icon {
+      transition: all 0.3s ease;
+    }
+    
+    /* Custom scrollbar */
+    ::-webkit-scrollbar {
+      width: 10px;
+    }
+    
+    ::-webkit-scrollbar-track {
+      background: var(--darker-blue);
+    }
+    
+    ::-webkit-scrollbar-thumb {
+      background: var(--gold);
+      border-radius: 5px;
+    }
+    
+    ::-webkit-scrollbar-thumb:hover {
+      background: var(--light-gold);
+    }
+    
+    /* Mobile menu */
+    .mobile-menu {
+      transform: translateX(-100%);
+      transition: transform 0.3s ease-in-out;
+    }
+    
+    .mobile-menu.active {
+      transform: translateX(0);
+      visibility: visible;
+      pointer-events: auto;
+    }
+  </style>
+  <style>
+.faq-container {
+  max-width: 800px;
+  margin: 40px auto;
+  padding: 0 20px;
+  font-family: sans-serif;
+  color: #fff;
+}
+.faq-container h2,
+.faq-container h4 {
+  text-align: center;
+}
+.faq-container h4 {
+  color: #ccc;
+  font-weight: normal;
+  margin-bottom: 30px;
+}
+.faq-card {
+  background-color: #111;
+  border: 1px solid #333;
+  border-radius: 10px;
+  margin-bottom: 15px;
+  overflow: hidden;
+  transition: all 0.3s ease;
+}
+.faq-question {
+  background: none;
+  border: none;
+  color: #ffd700;
+  padding: 20px;
+  text-align: left;
+  width: 100%;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  position: relative;
+}
+.faq-question::after {
+  content: '+';
+  position: absolute;
+  right: 20px;
+  font-size: 20px;
+  color: #ccc;
+}
+.faq-card.active .faq-question::after {
+  content: '–';
+}
+.faq-answer {
+  display: none;
+  padding: 0 20px 20px;
+  font-size: 15px;
+  line-height: 1.6;
+  color: #ddd;
+}
+.faq-card.active .faq-answer {
+  display: block;
+}
+</style>
+</head>
+<body class="relative overflow-x-hidden">
+<!-- Bubbles background effect -->
+<div id="bubbles-container" class="fixed inset-0 pointer-events-none overflow-hidden z-0"></div>
+
+<!-- Navigation -->
+ <!-- Navigation -->
+<nav class="bg-opacity-90 bg-[#060d13] backdrop-blur-md fixed w-full z-50 shadow-lg">
+  <div class="container mx-auto px-4 py-3 flex justify-between items-center">
+    <a href="#inicio" class="flex items-center gap-2" aria-label="JK CHOPP — voltar ao início">
+      <img src="jk-logo.png" alt="" class="w-10 h-10 object-contain rounded-full">
+      <span class="brand-title text-2xl">JK CHOPP</span>
+    </a>
+
+    <!-- Desktop Navigation -->
+    <div class="hidden md:flex space-x-6">
+  <a href="#inicio" class="nav-link text-white hover:text-[#e9c555]">Início</a>
+  <a href="#catalogo" class="nav-link text-white hover:text-[#e9c555]">Catálogo</a>
+  <a href="#servicos" class="nav-link text-white hover:text-[#e9c555]">Serviços</a>
+  <a href="#contato" class="nav-link text-white hover:text-[#e9c555]">Contato</a>
+  <a href="#festa" class="nav-link text-white hover:text-[#e9c555]">Festa</a>
+  <a href="#parceiros" class="nav-link text-white hover:text-[#e9c555]">Parceiros</a>
+</div>
+    <!-- Controle do menu mobile -->
+    <button id="menu-toggle" type="button" class="md:hidden text-white p-2 rounded-lg focus-visible:outline focus-visible:outline-2 focus-visible:outline-[#d4af37]" aria-label="Abrir menu" aria-controls="mobile-menu" aria-expanded="false">
+      <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path></svg>
+    </button>
+  </div>
+  <div id="mobile-menu" class="mobile-menu bg-[#060d13] md:hidden fixed top-[64px] left-0 w-full z-40 p-6 space-y-4 text-center shadow-xl invisible pointer-events-none" aria-hidden="true" inert>
+    <a href="#inicio" class="block text-white text-lg nav-link">Início</a>
+    <a href="#catalogo" class="block text-white text-lg nav-link">Catálogo</a>
+    <a href="#servicos" class="block text-white text-lg nav-link">Serviços</a>
+    <a href="#festa" class="block text-white text-lg nav-link">Sua festa</a>
+    <a href="#parceiros" class="block text-white text-lg nav-link">Parceiros</a>
+    <a href="#contato" class="block text-white text-lg nav-link">Contato</a>
+  </div>
+</nav>
+
+  <!-- Hero Section -->
+  <header id="inicio" class="relative pt-28 pb-20 px-4 bg-gradient-to-b from-[#0d141f] to-[#091118] border-b-4 border-[#d4af37]">
+  <div class="container mx-auto text-center relative z-10">
+    <!-- Substituindo o ícone por imagem -->
+    <div class="inline-block mb-6 relative">
+      <img src="jk-logo.png" alt="JK CHOPP Logo" class="w-40 h-40 object-contain mx-auto rounded-full shadow-lg">
+    </div>
+
+    <h1 class="brand-title-hero mb-4">JK CHOPP</h1>
+    <p class="text-xl md:text-2xl mb-8 max-w-2xl mx-auto">
+      O melhor chopp da região, você só encontra aqui!<br>
+      <span class="italic">Disk chopp, pediu? chegou!</span>
+    </p>
+
+    <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
+      <a href="https://wa.me/5518996305019?text=Ol%C3%A1%2C%20gostaria%20de%20fazer%20um%20pedido%20de%20chopp!" target="_blank" rel="noopener noreferrer" class="whatsapp-btn inline-flex items-center justify-center gap-2 px-6 py-3 rounded-full text-white font-bold text-base shadow-lg min-w-[230px]">
+        <i class="fab fa-whatsapp text-xl" aria-hidden="true"></i> Fazer pedido
+      </a>
+      <a href="https://www.instagram.com/jkchopp/" target="_blank" rel="noopener noreferrer" class="instagram-btn px-6 py-3 rounded-full font-bold text-base min-w-[230px]" aria-label="Visitar Instagram da JK CHOPP (abre nova aba)">
+        <i class="fab fa-instagram text-xl" aria-hidden="true"></i> Nosso Instagram
+      </a>
+    </div>
+  </div>
+
+ <!-- Cervejas decorativas - estilo caneca com espuma -->
+<!-- Ícone esquerdo -->
+<div class="absolute bottom-0 left-0 opacity-20 hidden md:block">
+  <img src="icon.png" alt="Chopp" class="w-32 h-32 object-contain">
+</div>
+
+<!-- Ícone direito -->
+<div class="absolute bottom-10 right-0 opacity-20 hidden md:block">
+  <img src="icon.png" alt="Chopp" class="w-28 h-28 object-contain">
+</div>
+</header>
+
+<!-- Sobre Nós -->
+<section id="sobre" class="py-20 px-4 bg-[#0a1520] border-t border-b border-[#d4af37] border-opacity-20">
+  <div class="container mx-auto max-w-4xl text-center">
+    <h2 class="text-3xl md:text-4xl font-bold gold-text mb-6">Quem Somos</h2>
+    <p class="text-gray-300 text-lg leading-relaxed">
+      Fundada em 15 de maio de 2025, em Araçatuba-SP, a JK Chopp nasceu com o compromisso de oferecer um produto de excelência e um atendimento que conquista pela confiança, respeito e profissionalismo.
+      <br><br>
+      Nosso chopp segue rigorosos padrões de qualidade — da fabricação ao transporte e armazenamento — garantindo frescor, sabor e consistência até chegar a você.
+      <br><br>
+      Com dedicação, responsabilidade e carinho, buscamos diariamente aprimorar nossos processos, pois entendemos que atender bem é a nossa razão de existir. Somos guiados por princípios sólidos e diretrizes firmes, que nos impulsionam a superar desafios e alcançar novos patamares.
+      <br><br>
+      Contamos com uma equipe especializada, preparada para oferecer atendimento de alto padrão, com segurança, eficiência e diferenciais que nos destacam no mercado.
+      <br><br>
+      Acreditamos que quando se trabalha com paixão, a qualidade se transforma no combustível que impulsiona a excelência e fortalece a nossa jornada.
+      <br><br>
+      <strong class="text-white font-bold">JK Chopp.</strong> Tradição, qualidade e confiança para eventos, bares e pontos de venda. Faça parte dessa experiência.
+    </p>
+  </div>
+</section>
+
+  
+
+<!-- ============================================= -->
+<!-- CATÁLOGO DE CHOPP - JK CHOPP                   -->
+<!-- ============================================= -->
+
+<section id="catalogo" class="py-20 px-4">
+
+  <div class="container mx-auto">
+
+    <!-- CABEÇALHO -->
+    <div class="text-center mb-16">
+      <h2 class="text-3xl md:text-4xl font-bold gold-text mb-4">
+        Nosso Catálogo de Chopp
+      </h2>
+
+      <p class="text-lg text-gray-300 max-w-3xl mx-auto">
+        Da tradição aos sabores mais especiais, a JK CHOPP
+        oferece uma seleção de chopps para diferentes
+        gostos e ocasiões. Conheça nossas opções e
+        escolha a experiência ideal para o seu momento!
+      </p>
+    </div>
+
+
+    <!-- ========================================= -->
+    <!-- MARCAS TRADICIONAIS                       -->
+    <!-- ========================================= -->
+
+    <div class="text-center mb-10">
+      <h3 class="text-2xl md:text-3xl font-bold gold-text mb-3">
+        Marcas Tradicionais
+      </h3>
+
+      <p class="text-gray-300 max-w-2xl mx-auto">
+        Os sabores clássicos e as marcas que fazem
+        parte dos melhores momentos e celebrações.
+      </p>
+    </div>
+
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 mb-20">
+
+
+      <!-- 01 - JK PILSEN -->
+      <div class="beer-card rounded-xl p-6 flex flex-col items-center text-center border border-yellow-500">
+
+        <img
+          src="jkpilsen.png"
+          alt="Chopp JK Pilsen"
+          class="w-24 h-24 object-contain rounded-full mb-4"
+          loading="lazy"
+        >
+
+        <h3 class="text-xl font-bold mb-2 gold-text">
+          JK Pilsen
+        </h3>
+
+        <p class="text-gray-300 mb-4">
+          O protagonista da nossa linha! Um chopp
+          dourado, leve, equilibrado e refrescante.
+          Uma escolha versátil para acompanhar
+          comemorações, encontros entre amigos
+          e momentos que merecem um bom chopp.
+        </p>
+
+        <div class="flex flex-wrap gap-2 justify-center mt-auto">
+          <span class="bg-[#091118] px-4 py-1 rounded-full text-sm font-medium">
+            Pilsen
+          </span>
+
+          <span class="bg-[#d4af37] text-black px-4 py-1 rounded-full text-sm font-medium">
+            Carro-chefe
+          </span>
+        </div>
+
+      </div>
+
+
+      <!-- 02 - ORIENTE -->
+      <div class="beer-card rounded-xl p-6 flex flex-col items-center text-center">
+
+        <img
+          src="oriente.png"
+          alt="Chopp Oriente"
+          class="w-24 h-24 object-contain rounded-full mb-4"
+          loading="lazy"
+        >
+
+        <h3 class="text-xl font-bold mb-2 gold-text">
+          Oriente
+        </h3>
+
+        <p class="text-gray-300 mb-4">
+          Um chopp dourado que valoriza
+          o equilíbrio entre sabor e
+          refrescância. O Oriente
+          é uma alternativa tradicional
+          e agradável para acompanhar
+          churrascos, reuniões familiares
+          e eventos com amigos.
+        </p>
+
+        <span class="bg-[#091118] px-4 py-1 rounded-full text-sm font-medium mt-auto">
+          Equilibrado
+        </span>
+
+      </div>
+
+
+      <!-- 03 - GOLD -->
+      <div class="beer-card rounded-xl p-6 flex flex-col items-center text-center">
+
+        <img
+          src="gold.png"
+          alt="Chopp Gold"
+          class="w-24 h-24 object-contain rounded-full mb-4"
+          loading="lazy"
+        >
+
+        <h3 class="text-xl font-bold mb-2 gold-text">
+          Gold
+        </h3>
+
+        <p class="text-gray-300 mb-4">
+          Suavidade e sabor em uma combinação
+          convidativa. O chopp Gold apresenta
+          uma proposta leve, com notas
+          maltadas e finalização suave,
+          sendo uma escolha agradável para
+          quem aprecia um chopp equilibrado.
+        </p>
+
+        <span class="bg-[#091118] px-4 py-1 rounded-full text-sm font-medium mt-auto">
+          Suave
+        </span>
+
+      </div>
+
+
+      <!-- 04 - JK VINHO TINTO -->
+      <div class="beer-card rounded-xl p-6 flex flex-col items-center text-center border border-yellow-500">
+
+        <img
+          src="jkvinhotinto.png"
+          alt="Chopp JK Vinho Tinto"
+          class="w-24 h-24 object-contain rounded-full mb-4"
+          loading="lazy"
+        >
+
+        <h3 class="text-xl font-bold mb-2 gold-text">
+          JK Vinho Tinto
+        </h3>
+
+        <p class="text-gray-300 mb-4">
+          O queridinho dos nossos clientes!
+          Uma alternativa especial para quem
+          aprecia o sabor característico do
+          chopp de vinho tinto. Sua proposta
+          diferenciada conquista espaço em
+          festas, confraternizações e
+          celebrações especiais.
+        </p>
+
+        <div class="flex flex-wrap gap-2 justify-center mt-auto">
+          <span class="bg-[#091118] px-4 py-1 rounded-full text-sm font-medium">
+            Chopp de Vinho
+          </span>
+
+          <span class="bg-[#d4af37] text-black px-4 py-1 rounded-full text-sm font-medium">
+            Mais vendido
+          </span>
+        </div>
+
+      </div>
+
+
+      <!-- 05 - HEINEKEN -->
+      <div class="beer-card rounded-xl p-6 flex flex-col items-center text-center">
+
+        <img
+          src="heineken.png"
+          alt="Chopp Heineken"
+          class="w-24 h-24 object-contain rounded-full mb-4"
+          loading="lazy"
+        >
+
+        <h3 class="text-xl font-bold mb-2 gold-text">
+          Heineken
+        </h3>
+
+        <p class="text-gray-300 mb-4">
+          Reconhecido mundialmente,
+          o chopp Heineken combina
+          tradição cervejeira e
+          identidade marcante.
+          Uma opção para quem aprecia
+          o sabor característico
+          de uma das marcas mais
+          conhecidas do mundo.
+        </p>
+
+        <span class="bg-[#091118] px-4 py-1 rounded-full text-sm font-medium mt-auto">
+          Marca Internacional
+        </span>
+
+      </div>
+
+
+      <!-- 06 - AMSTEL -->
+      <div class="beer-card rounded-xl p-6 flex flex-col items-center text-center">
+
+        <img
+          src="amstel.png"
+          alt="Chopp Amstel"
+          class="w-24 h-24 object-contain rounded-full mb-4"
+          loading="lazy"
+        >
+
+        <h3 class="text-xl font-bold mb-2 gold-text">
+          Amstel
+        </h3>
+
+        <p class="text-gray-300 mb-4">
+          Inspirado na tradição cervejeira
+          holandesa, o chopp Amstel
+          proporciona uma experiência
+          clássica para quem aprecia
+          marcas consagradas.
+          Uma escolha versátil para
+          diferentes ocasiões.
+        </p>
+
+        <span class="bg-[#091118] px-4 py-1 rounded-full text-sm font-medium mt-auto">
+          Tradição Holandesa
+        </span>
+
+      </div>
+
+
+      <!-- 07 - BRAHMA -->
+      <div class="beer-card rounded-xl p-6 flex flex-col items-center text-center">
+
+        <img
+          src="brahma.png"
+          alt="Chopp Brahma"
+          class="w-24 h-24 object-contain rounded-full mb-4"
+          loading="lazy"
+        >
+
+        <h3 class="text-xl font-bold mb-2 gold-text">
+          Brahma
+        </h3>
+
+        <p class="text-gray-300 mb-4">
+          Um clássico brasileiro que
+          atravessa gerações.
+          O chopp Brahma é reconhecido
+          por sua tradição e presença
+          em bares e comemorações.
+          Uma escolha familiar
+          para quem aprecia o
+          sabor de uma marca histórica.
+        </p>
+
+        <span class="bg-[#091118] px-4 py-1 rounded-full text-sm font-medium mt-auto">
+          Clássico Brasileiro
+        </span>
+
+      </div>
+
+
+      <!-- 08 - ANTARCTICA -->
+      <div class="beer-card rounded-xl p-6 flex flex-col items-center text-center">
+
+        <img
+          src="antarctica.png"
+          alt="Chopp Antarctica"
+          class="w-24 h-24 object-contain rounded-full mb-4"
+          loading="lazy"
+        >
+
+        <h3 class="text-xl font-bold mb-2 gold-text">
+          Antarctica
+        </h3>
+
+        <p class="text-gray-300 mb-4">
+          Parte da história cervejeira
+          brasileira, o chopp Antarctica
+          carrega a tradição de uma marca
+          reconhecida nacionalmente.
+          Uma opção clássica para
+          acompanhar confraternizações
+          e bons momentos à mesa.
+        </p>
+
+        <span class="bg-[#091118] px-4 py-1 rounded-full text-sm font-medium mt-auto">
+          Tradição Nacional
+        </span>
+
+      </div>
+
+    </div>
+
+
+    <!-- ========================================= -->
+    <!-- ESPECIAIS                                -->
+    <!-- ========================================= -->
+
+    <div class="text-center mb-10">
+
+      <h3 class="text-2xl md:text-3xl font-bold gold-text mb-3">
+        Especiais
+      </h3>
+
+      <p class="text-gray-300 max-w-2xl mx-auto">
+        Explore opções diferenciadas da linha JK CHOPP,
+        criadas para quem gosta de variar sabores
+        e descobrir novas experiências.
+      </p>
+
+    </div>
+
+
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+
+
+      <!-- 01 - JK ULTRA -->
+      <div class="beer-card rounded-xl p-6 flex flex-col items-center text-center">
+
+        <img
+          src="jkultra.png"
+          alt="Chopp JK Ultra"
+          class="w-24 h-24 object-contain rounded-full mb-4"
+          loading="lazy"
+        >
+
+        <h3 class="text-xl font-bold mb-2 gold-text">
+          JK Ultra
+        </h3>
+
+        <p class="text-gray-300 mb-4">
+          Para quem valoriza uma experiência leve
+          e descomplicada. O JK Ultra é uma opção
+          pensada para acompanhar ocasiões descontraídas,
+          trazendo uma proposta de suavidade e frescor
+          a cada momento.
+        </p>
+
+        <span class="bg-[#091118] px-4 py-1 rounded-full text-sm font-medium mt-auto">
+          Leve e Refrescante
+        </span>
+
+      </div>
+
+
+      <!-- 02 - JK VINHO BRANCO -->
+      <div class="beer-card rounded-xl p-6 flex flex-col items-center text-center">
+
+        <img
+          src="jkbranco.png"
+          alt="Chopp JK Vinho Branco"
+          class="w-24 h-24 object-contain rounded-full mb-4"
+          loading="lazy"
+        >
+
+        <h3 class="text-xl font-bold mb-2 gold-text">
+          JK Vinho Branco
+        </h3>
+
+        <p class="text-gray-300 mb-4">
+          Uma proposta delicada para quem deseja
+          sair do tradicional. O JK Vinho Branco
+          oferece uma alternativa de chopp de
+          vinho para momentos especiais,
+          encontros e celebrações que pedem
+          uma escolha diferenciada.
+        </p>
+
+        <span class="bg-[#091118] px-4 py-1 rounded-full text-sm font-medium mt-auto">
+          Chopp de Vinho Branco
+        </span>
+
+      </div>
+
+
+      <!-- 03 - JK VINHO ROSÉ -->
+      <div class="beer-card rounded-xl p-6 flex flex-col items-center text-center">
+
+        <img
+          src="jkrose.png"
+          alt="Chopp JK Vinho Rosé"
+          class="w-24 h-24 object-contain rounded-full mb-4"
+          loading="lazy"
+        >
+
+        <h3 class="text-xl font-bold mb-2 gold-text">
+          JK Vinho Rosé
+        </h3>
+
+        <p class="text-gray-300 mb-4">
+          Charme e personalidade em uma opção
+          diferenciada. O JK Vinho Rosé é
+          uma escolha especial para quem
+          busca variedade no cardápio,
+          combinando com celebrações,
+          recepções e encontros memoráveis.
+        </p>
+
+        <span class="bg-[#091118] px-4 py-1 rounded-full text-sm font-medium mt-auto">
+          Chopp de Vinho Rosé
+        </span>
+
+      </div>
+
+
+      <!-- 04 - JK ICE -->
+      <div class="beer-card rounded-xl p-6 flex flex-col items-center text-center">
+
+        <img
+          src="jkice.png"
+          alt="JK Ice"
+          class="w-24 h-24 object-contain rounded-full mb-4"
+          loading="lazy"
+        >
+
+        <h3 class="text-xl font-bold mb-2 gold-text">
+          JK Ice
+        </h3>
+
+        <p class="text-gray-300 mb-4">
+          Uma alternativa para quem gosta
+          de variar e experimentar novos
+          sabores. O JK Ice traz uma
+          proposta descontraída para
+          animar encontros, festas
+          e momentos de celebração.
+        </p>
+
+        <span class="bg-[#091118] px-4 py-1 rounded-full text-sm font-medium mt-auto">
+          Linha Especial
+        </span>
+
+      </div>
+
+
+      <!-- 05 - JK BLACK -->
+      <div class="beer-card rounded-xl p-6 flex flex-col items-center text-center">
+
+        <img
+          src="jkblack.png"
+          alt="Chopp JK Black"
+          class="w-24 h-24 object-contain rounded-full mb-4"
+          loading="lazy"
+        >
+
+        <h3 class="text-xl font-bold mb-2 gold-text">
+          JK Black
+        </h3>
+
+        <p class="text-gray-300 mb-4">
+          Para quem procura uma experiência
+          de personalidade. O JK Black
+          apresenta uma proposta marcante
+          dentro da nossa seleção,
+          sendo uma alternativa para
+          apreciadores de estilos
+          diferenciados de chopp.
+        </p>
+
+        <span class="bg-[#091118] px-4 py-1 rounded-full text-sm font-medium mt-auto">
+          Estilo Especial
+        </span>
+
+      </div>
+
+
+      <!-- 06 - JK IPA -->
+      <div class="beer-card rounded-xl p-6 flex flex-col items-center text-center">
+
+        <img
+          src="jkipa.png"
+          alt="Chopp JK IPA"
+          class="w-24 h-24 object-contain rounded-full mb-4"
+          loading="lazy"
+        >
+
+        <h3 class="text-xl font-bold mb-2 gold-text">
+          JK IPA
+        </h3>
+
+        <p class="text-gray-300 mb-4">
+          Uma opção para quem aprecia
+          estilos cervejeiros mais intensos.
+          Inspirado na tradição das IPAs,
+          o JK IPA é uma escolha para
+          consumidores que buscam
+          personalidade e novas
+          experiências no universo do chopp.
+        </p>
+
+        <span class="bg-[#091118] px-4 py-1 rounded-full text-sm font-medium mt-auto">
+          IPA
+        </span>
+
+      </div>
+
+    </div>
+
+<!-- FIM DO CATÁLOGO -->
+
+    <div class="mt-12 text-center">
+      
+    </div>
+  </div>
+</section>
+
+  <!-- Services Section -->
+  <section id="servicos" class="py-20 px-4 bg-[#0a1520]">
+    <div class="container mx-auto">
+      <div class="text-center mb-16">
+        <h2 class="text-3xl md:text-4xl font-bold gold-text mb-4">Eventos & Serviços</h2>
+        <p class="text-lg text-gray-300 max-w-2xl mx-auto">Oferecemos soluções completas para seu evento, desde a entrega até a montagem e manutenção.</p>
+      </div>
+      
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <!-- Delivery Service -->
+        <div class="service-card bg-[#091118] rounded-xl p-6 shadow-lg">
+          <div class="service-icon w-16 h-16 bg-[#d4af37] bg-opacity-20 rounded-full flex items-center justify-center mb-4 mx-auto">
+            <i class="fas fa-truck text-[#d4af37] text-2xl"></i>
+          </div>
+          <h3 class="text-xl font-bold mb-3 text-center gold-text">Entrega Completa</h3>
+          <p class="text-gray-300 text-center">Levamos chopeiras, cilindros e vasilhames até você com montagem completa.</p>
+        </div>
+        
+        <!-- Maintenance -->
+        <div class="service-card bg-[#091118] rounded-xl p-6 shadow-lg">
+          <div class="service-icon w-16 h-16 bg-[#d4af37] bg-opacity-20 rounded-full flex items-center justify-center mb-4 mx-auto">
+            <i class="fas fa-tools text-[#d4af37] text-2xl"></i>
+          </div>
+          <h3 class="text-xl font-bold mb-3 text-center gold-text">Manutenção</h3>
+          <p class="text-gray-300 text-center">Oferecemos serviços de manutenção e assepsia com técnicos especializados.</p>
+        </div>
+        
+        <!-- Events -->
+        <div class="service-card bg-[#091118] rounded-xl p-6 shadow-lg">
+          <div class="service-icon w-16 h-16 bg-[#d4af37] bg-opacity-20 rounded-full flex items-center justify-center mb-4 mx-auto">
+            <i class="fas fa-glass-cheers text-[#d4af37] text-2xl"></i>
+          </div>
+          <h3 class="text-xl font-bold mb-3 text-center gold-text">Eventos</h3>
+          <p class="text-gray-300 text-center">Atendemos festas, casamentos, confraternizações e eventos corporativos.</p>
+        </div>
+        
+        <!-- Technical Installation -->
+        <div class="service-card bg-[#091118] rounded-xl p-6 shadow-lg">
+          <div class="service-icon w-16 h-16 bg-[#d4af37] bg-opacity-20 rounded-full flex items-center justify-center mb-4 mx-auto">
+            <i class="fas fa-wrench text-[#d4af37] text-2xl"></i>
+          </div>
+          <h3 class="text-xl font-bold mb-3 text-center gold-text">Instalação Técnica</h3>
+          <p class="text-gray-300 text-center">Instalação profissional de equipamentos com técnicos especializados.</p>
+        </div>
+        
+        <!-- Delivery Info -->
+        <div class="service-card bg-[#091118] rounded-xl p-6 shadow-lg">
+          <div class="service-icon w-16 h-16 bg-[#d4af37] bg-opacity-20 rounded-full flex items-center justify-center mb-4 mx-auto">
+            <i class="fas fa-map-marked-alt text-[#d4af37] text-2xl"></i>
+          </div>
+          <h3 class="text-xl font-bold mb-3 text-center gold-text">Entrega Regional</h3>
+          <p class="text-gray-300 text-center">Entregamos em Araçatuba e região. Valor da entrega varia conforme a distância.</p>
+        </div>
+        
+        <!-- Custom Solutions -->
+        <div class="service-card bg-[#091118] rounded-xl p-6 shadow-lg">
+          <div class="service-icon w-16 h-16 bg-[#d4af37] bg-opacity-20 rounded-full flex items-center justify-center mb-4 mx-auto">
+            <i class="fas fa-clipboard-check text-[#d4af37] text-2xl"></i>
+          </div>
+          <h3 class="text-xl font-bold mb-3 text-center gold-text">Soluções Personalizadas</h3>
+          <p class="text-gray-300 text-center">Atendemos suas necessidades específicas com soluções sob medida.</p>
+        </div>
+      </div>
+      
+      <div class="mt-12 text-center">
+        <div class="bg-[#d4af37] bg-opacity-10 p-6 rounded-xl inline-block max-w-2xl">
+          <p class="text-xl font-bold gold-text mb-2">Quer fazer um orçamento para seu evento?</p>
+          <p class="text-gray-300 mb-4">Entre em contato conosco e solicite um orçamento personalizado!</p>
+          
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Delivery Info Banner -->
+  <section class="py-10 px-4 bg-[#d4af37] bg-opacity-5">
+    <div class="container mx-auto">
+      <div class="bg-[#091118] rounded-xl p-6 shadow-lg border border-[#d4af37] border-opacity-30">
+        <div class="flex flex-col md:flex-row items-center">
+          <div class="w-16 h-16 bg-[#d4af37] bg-opacity-20 rounded-full flex items-center justify-center mr-0 md:mr-6 mb-4 md:mb-0 flex-shrink-0">
+            <i class="fas fa-info-circle text-[#d4af37] text-2xl"></i>
+          </div>
+          <div class="text-center md:text-left">
+            <h3 class="text-xl font-bold mb-2 gold-text">Informação sobre entregas</h3>
+            <p class="text-gray-300">O valor da entrega é calculado com base na distância. Entre em contato para consultar o custo de entrega para sua localidade.</p>
+          </div>
+          <div class="mt-4 md:mt-0 md:ml-auto">
+            
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contato" class="py-20 px-4">
+    <div class="container mx-auto">
+      <div class="text-center mb-12">
+        <h2 class="text-3xl md:text-4xl font-bold gold-text mb-4">Entre em Contato</h2>
+        <p class="text-lg text-gray-300 max-w-2xl mx-auto">Estamos prontos para atender você! Entre em contato pelos canais abaixo.</p>
+      </div>
+
+      <!-- Dois cartões lado a lado no desktop, empilhados no celular -->
+      <div class="max-w-5xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-8 items-stretch">
+
+        <!-- Coluna 1: informações de contato -->
+        <div class="bg-[#091118] rounded-xl p-6 md:p-8 shadow-lg min-w-0">
+          <h3 class="text-xl font-bold mb-6 gold-text">Informações de Contato</h3>
+          <div class="space-y-6">
+            <div class="flex items-start gap-4">
+              <div class="w-10 h-10 bg-[#d4af37] bg-opacity-20 rounded-full flex items-center justify-center shrink-0"><i class="fab fa-whatsapp text-[#d4af37]" aria-hidden="true"></i></div>
+              <div class="min-w-0"><p class="font-bold mb-1">WhatsApp</p><a href="https://wa.me/5518996305019" target="_blank" rel="noopener noreferrer" class="text-gray-300 hover:text-white transition-colors">(18) 99630-5019</a></div>
+            </div>
+            <div class="flex items-start gap-4">
+              <div class="w-10 h-10 bg-[#d4af37] bg-opacity-20 rounded-full flex items-center justify-center shrink-0"><i class="fab fa-instagram text-[#d4af37]" aria-hidden="true"></i></div>
+              <div class="min-w-0"><p class="font-bold mb-1">Instagram</p><a href="https://www.instagram.com/jkchopp/" target="_blank" rel="noopener noreferrer" class="text-gray-300 hover:text-white transition-colors">@jkchopp</a></div>
+            </div>
+            <div class="flex items-start gap-4">
+              <div class="w-10 h-10 bg-[#d4af37] bg-opacity-20 rounded-full flex items-center justify-center shrink-0"><i class="fas fa-envelope text-[#d4af37]" aria-hidden="true"></i></div>
+              <div class="min-w-0"><p class="font-bold mb-1">Email</p><a href="mailto:www.jkchopp@gmail.com" class="text-gray-300 hover:text-white transition-colors break-all">www.jkchopp@gmail.com</a></div>
+            </div>
+            <div class="flex items-start gap-4">
+              <div class="w-10 h-10 bg-[#d4af37] bg-opacity-20 rounded-full flex items-center justify-center shrink-0"><i class="fas fa-map-marker-alt text-[#d4af37]" aria-hidden="true"></i></div>
+              <div class="min-w-0"><p class="font-bold mb-1">Endereço</p><p class="text-gray-300 leading-relaxed">Rua Vasco da Gama, 426<br>Jardim Jussara — Araçatuba/SP<br>CEP 16021-100</p></div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Coluna 2: horários e mapa integrados -->
+        <div class="bg-[#091118] rounded-xl p-6 md:p-8 shadow-lg min-w-0 flex flex-col">
+          <h3 class="text-xl font-bold mb-6 gold-text text-center">Horário de Atendimento</h3>
+          <div class="space-y-4 mb-6">
+            <div class="pb-4 border-b border-gray-700">
+              <div class="flex justify-between items-center gap-3"><span class="font-semibold text-white text-sm md:text-base">Segunda a Sexta</span><span class="font-bold text-white whitespace-nowrap text-sm md:text-base">08h às 18h</span></div>
+              <div class="flex justify-between items-center gap-3 mt-2"><span class="text-gray-400 text-xs md:text-sm">Plantão de atendimento</span><span class="text-[#d4af37] font-semibold text-xs md:text-sm whitespace-nowrap">Até 20h</span></div>
+            </div>
+            <div class="pb-4 border-b border-gray-700">
+              <div class="flex justify-between items-center gap-3"><span class="font-semibold text-white text-sm md:text-base">Sábado</span><span class="font-bold text-white whitespace-nowrap text-sm md:text-base">08h às 15h</span></div>
+              <div class="flex justify-between items-center gap-3 mt-2"><span class="text-gray-400 text-xs md:text-sm">Plantão emergencial</span><span class="text-[#d4af37] font-semibold text-xs md:text-sm whitespace-nowrap">Até 18h</span></div>
+            </div>
+            <div class="flex justify-between items-center gap-3"><span class="font-semibold text-white">Domingo</span><span class="font-bold text-red-400">Fechado</span></div>
+          </div>
+          <div class="bg-[#15212A] border border-[#d4af37]/20 rounded-xl p-4 mb-6">
+            <div class="flex items-center gap-2 mb-2"><i class="fas fa-info-circle text-[#d4af37]" aria-hidden="true"></i><span class="text-sm font-bold text-[#d4af37]">Informações importantes</span></div>
+            <p class="text-gray-300 text-xs md:text-sm leading-relaxed">Aos sábados, atendimento exclusivo para eventos agendados. Domingo sem expediente; atendimentos excepcionais apenas em emergências, mediante disponibilidade.</p>
+          </div>
+          <!-- O mapa permanece DENTRO do cartão de horários -->
+          <div class="rounded-xl overflow-hidden border border-[#d4af37] shadow-lg mt-auto">
+            <iframe title="Localização da JK CHOPP — Rua Vasco da Gama, 426, Araçatuba" src="https://www.google.com/maps?q=Rua%20Vasco%20da%20Gama%2C%20426%2C%20Jardim%20Jussara%2C%20Ara%C3%A7atuba%2C%20SP%2C%2016021-100&amp;output=embed" width="100%" height="240" style="border:0; display:block;" loading="lazy" allowfullscreen referrerpolicy="no-referrer-when-downgrade"></iframe>
+          </div>
+          <a href="https://maps.app.goo.gl/AJ7moNv34xaZrY9r5" target="_blank" rel="noopener noreferrer" class="mt-5 self-center inline-flex items-center justify-center gap-2 bg-[#d4af37] hover:bg-[#e9c555] text-[#091118] font-bold px-6 py-3 rounded-full shadow-lg transition-colors"><i class="fas fa-map-marker-alt" aria-hidden="true"></i>Como chegar</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA Section -->
+  <section class="py-16 px-4 bg-[#d4af37] bg-opacity-10">
+    <div class="container mx-auto text-center">
+      <h2 class="text-3xl md:text-4xl font-bold gold-text mb-6">Pronto para refrescar seu evento?</h2>
+      <p class="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">Faça seu pedido agora e garanta o melhor chopp para sua festa ou evento!</p>
+      <a href="https://wa.me/5518996305019?text=Ol%C3%A1%2C%20gostaria%20de%20fazer%20um%20pedido%20de%20chopp!" target="_blank" rel="noopener noreferrer"
+         class="whatsapp-btn inline-flex items-center px-8 py-4 rounded-full text-white font-bold text-lg shadow-lg">
+        <i class="fab fa-whatsapp mr-2 text-xl"></i>
+        Fazer pedido agora
+      </a>
+    </div>
+  </section>
+
+<!-- Missão, Visão e Valores -->
+<section class="py-20 px-4 bg-[#0a1520] border-t border-[#d4af37] border-opacity-30">
+  <div class="container mx-auto max-w-4xl text-center">
+    <h2 class="text-3xl md:text-4xl font-bold gold-text mb-10">Nossa Essência</h2>
+    
+    <div class="mb-10">
+      <h3 class="text-2xl font-semibold gold-text mb-4">Missão</h3>
+      <p class="text-gray-300 text-lg">
+        Oferecer produtos de qualidade reconhecida, com distribuição eficiente e serviços que superem expectativas.
+        Buscamos sempre o crescimento sustentável, gerando prosperidade para a sociedade e valorização real dos nossos colaboradores.
+      </p>
+    </div>
+
+    <div class="mb-10">
+      <h3 class="text-2xl font-semibold gold-text mb-4">Visão</h3>
+      <p class="text-gray-300 text-lg">
+        Ser reconhecida como a principal referência em chopp no interior paulista — e futuramente em todo o Brasil —
+        oferecendo condições exemplares de trabalho, respeito ao cliente e paixão em cada entrega.
+      </p>
+    </div>
+
+    <div>
+      <h3 class="text-2xl font-semibold gold-text mb-4">Valores</h3>
+      <p class="text-gray-300 text-lg leading-relaxed">
+        Trabalho com propósito • Comprometimento genuíno • Integridade em cada ação <br />
+        Respeito acima de tudo • Relacionamento próximo e humano <br />
+        Simplicidade com eficiência • Perseverança diária • Carinho em tudo o que fazemos
+      </p>
+    </div>
+  </div>
+</section>
+
+<!-- Quanto Chopp Pedir -->
+<section id="festa" class="py-20 px-4 bg-[#0a1520] border-t border-[#d4af37] border-opacity-20">
+  <div class="container mx-auto max-w-4xl text-center">
+    <h2 class="text-3xl md:text-4xl font-bold gold-text mb-8">🍻 Quanto chopp pedir para sua festa?</h2>
+    
+    <p class="text-gray-300 mb-6 text-lg">
+      Dica da JK Chopp
+    </p>
+
+    <div class="text-left space-y-6 text-gray-300">
+      <div>
+        <h3 class="text-xl font-bold gold-text mb-2">✅ Consumo por pessoa</h3>
+        <p>• Festas com público que bebe bem: <strong>2 a 2,5L por pessoa</strong> (evento de 4–5 horas)<br>
+        • Consumo mais leve ou com outras bebidas: <strong>1,5L por pessoa</strong></p>
+      </div>
+
+      <div>
+        <h3 class="text-xl font-bold gold-text mb-2">🛢️ Capacidade por barril</h3>
+        <table class="w-full text-left text-sm border border-[#d4af37]">
+          <thead class="bg-[#d4af37] text-black font-bold">
+            <tr><th class="p-2">Barril</th><th class="p-2">Serve até</th></tr>
+          </thead>
+          <tbody>
+            <tr class="border-t border-[#d4af37]"><td class="p-2">30 litros</td><td class="p-2">15 pessoas</td></tr>
+            <tr class="border-t border-[#d4af37]"><td class="p-2">50 litros</td><td class="p-2">25 pessoas</td></tr>
+          </tbody>
+        </table>
+        <p class="mt-2 text-sm italic">Baseado em consumo de 2L por pessoa em festas animadas!</p>
+      </div>
+
+      <div>
+        <h3 class="text-xl font-bold gold-text mb-2">🎉 Exemplo prático</h3>
+        <ul class="list-disc list-inside">
+          <li>30 pessoas → estimativa de 60L → 2 barris de 30L (50L + 30L = 80L, com 20L adicionais)</li>
+          <li>100 pessoas → 200L → 4 barris de 50L</li>
+          <li>150 pessoas → 300L → 6 barris de 50L</li>
+        </ul>
+      </div>
+
+      <div>
+        <h3 class="text-xl font-bold gold-text mb-2">🌡️ Leve em conta:</h3>
+        <ul class="list-disc list-inside">
+          <li>Quanto mais quente, mais se bebe</li>
+          <li>Música boa anima a galera</li>
+          <li>Sempre tem um grupo que bebe o dobro</li>
+        </ul>
+      </div>
+      <div class="text-center mt-10">
+        <p class="text-lg font-semibold">🚚 E se acabar?</p>
+        <p class="text-gray-300 mt-1">Consulte nossa equipe sobre disponibilidade e reposição durante o evento. Podemos ajudar a estimar a quantidade ideal.</p>
+        
+      </div>
+    </div>
+  </div>
+</section>
+<!-- Parceiros (Carrossel) -->
+<section id="parceiros" class="py-20 px-4 bg-[#0a1520] border-t border-[#d4af37] border-opacity-20">
+  <div class="container mx-auto max-w-6xl text-center">
+    <h2 class="text-3xl md:text-4xl font-bold gold-text mb-6">Nossos Parceiros</h2>
+    <p class="text-gray-300 mb-10 max-w-2xl mx-auto">
+      Temos orgulho em contar com a confiança de empresas e profissionais que compartilham dos mesmos valores de qualidade e compromisso.
+    </p>
+
+    <!-- Swiper -->
+    <div class="swiper partners-swiper pb-10">
+      <div class="swiper-wrapper">
+
+        <!-- Slide 1 -->
+        <div class="swiper-slide">
+          <div class="bg-[#091118] p-6 rounded-xl shadow-lg hover:shadow-xl transition-all">
+            <img src="point.png" alt="Point do Chopp"
+                 class="w-24 h-24 object-cover rounded-full mx-auto mb-4 border-2 border-[#d4af37] bg-black">
+            <p class="text-white font-semibold">Point do Chopp</p>
+          </div>
+        </div>
+
+        <!-- Slide 2 -->
+        <div class="swiper-slide">
+          <div class="bg-[#091118] p-6 rounded-xl shadow-lg hover:shadow-xl transition-all">
+            <img src="vitrola.png" alt="Vitrola Vintage Bar"
+                 class="w-24 h-24 object-cover rounded-full mx-auto mb-4 border-2 border-[#d4af37] bg-black">
+            <p class="text-white font-semibold">Vitrola Vintage Bar</p>
+          </div>
+        </div>
+
+        <!-- Slide 3 -->
+        <div class="swiper-slide">
+          <div class="bg-[#091118] p-6 rounded-xl shadow-lg hover:shadow-xl transition-all">
+            <img src="dbb.png" alt="DBB"
+                 class="w-24 h-24 object-cover rounded-full mx-auto mb-4 border-2 border-[#d4af37] bg-black">
+            <p class="text-white font-semibold">DBB</p>
+          </div>
+        </div>
+
+        <!-- Slide 4 -->
+        <div class="swiper-slide">
+          <div class="bg-[#091118] p-6 rounded-xl shadow-lg hover:shadow-xl transition-all">
+            <img src="espetojussara.png" alt="Espetaria Ki Espeto"
+                 class="w-24 h-24 object-cover rounded-full mx-auto mb-4 border-2 border-[#d4af37] bg-black">
+            <p class="text-white font-semibold">Espetaria Ki Espeto</p>
+          </div>
+        </div>
+
+        <!-- Slide 5 -->
+        <div class="swiper-slide">
+          <div class="bg-[#091118] p-6 rounded-xl shadow-lg hover:shadow-xl transition-all">
+            <img src="donamaria.png" alt="Dona Maria"
+                 class="w-24 h-24 object-cover rounded-full mx-auto mb-4 border-2 border-[#d4af37] bg-black">
+            <p class="text-white font-semibold">Dona Maria</p>
+          </div>
+        </div>
+
+        <!-- Slide 6 -->
+        <div class="swiper-slide">
+          <div class="bg-[#091118] p-6 rounded-xl shadow-lg hover:shadow-xl transition-all">
+            <img src="chico.png" alt="Boteco Santo Chico"
+                 class="w-24 h-24 object-cover rounded-full mx-auto mb-4 border-2 border-[#d4af37] bg-black">
+            <p class="text-white font-semibold">Boteco Santo Chico</p>
+          </div>
+        </div>
+
+        <!-- Slide 7 -->
+        <div class="swiper-slide">
+          <div class="bg-[#091118] p-6 rounded-xl shadow-lg hover:shadow-xl transition-all">
+            <img src="hall.png" alt="Mr.Hall"
+                 class="w-24 h-24 object-cover rounded-full mx-auto mb-4 border-2 border-[#d4af37] bg-black">
+            <p class="text-white font-semibold">Mr.Hall</p>
+          </div>
+        </div>
+
+        <!-- Slide 8 -->
+        <div class="swiper-slide">
+          <div class="bg-[#091118] p-6 rounded-xl shadow-lg hover:shadow-xl transition-all">
+            <img src="rdn.png" alt="Churrascaria Rondon"
+                 class="w-24 h-24 object-cover rounded-full mx-auto mb-4 border-2 border-[#d4af37] bg-black">
+            <p class="text-white font-semibold">Churrascaria Rondon</p>
+          </div>
+        </div>
+
+        <!-- Slide 9 -->
+        <div class="swiper-slide">
+          <div class="bg-[#091118] p-6 rounded-xl shadow-lg hover:shadow-xl transition-all">
+            <img src="xim.png" alt="Lanchonete do Xim"
+                 class="w-24 h-24 object-cover rounded-full mx-auto mb-4 border-2 border-[#d4af37] bg-black">
+            <p class="text-white font-semibold">Lanchonete do Xim</p>
+          </div>
+        </div>
+
+        <!-- Slide 10 -->
+        <div class="swiper-slide">
+          <div class="bg-[#091118] p-6 rounded-xl shadow-lg hover:shadow-xl transition-all">
+            <img src="cifra.png" alt="Quintal do Cifra"
+                 class="w-24 h-24 object-cover rounded-full mx-auto mb-4 border-2 border-[#d4af37] bg-black">
+            <p class="text-white font-semibold">Quintal do Cifra</p>
+          </div>
+        </div>
+
+        <!-- Slide 11 -->
+        <div class="swiper-slide">
+          <div class="bg-[#091118] p-6 rounded-xl shadow-lg hover:shadow-xl transition-all">
+            <img src="balieiro.png" alt="Espetaria Balieiro"
+                 class="w-24 h-24 object-cover rounded-full mx-auto mb-4 border-2 border-[#d4af37] bg-black">
+            <p class="text-white font-semibold">Espetaria Balieiro</p>
+          </div>
+        </div>
+
+        <!-- Slide 12 -->
+        <div class="swiper-slide">
+          <div class="bg-[#091118] p-6 rounded-xl shadow-lg hover:shadow-xl transition-all">
+            <img src="campanna.png" alt="Campanna Pizzaria"
+                 class="w-24 h-24 object-cover rounded-full mx-auto mb-4 border-2 border-[#d4af37] bg-black">
+            <p class="text-white font-semibold">Campanna Pizzaria</p>
+          </div>
+        </div>
+
+        <!-- Slide 13 -->
+        <div class="swiper-slide">
+          <div class="bg-[#091118] p-6 rounded-xl shadow-lg hover:shadow-xl transition-all">
+            <img src="nabrasa.png" alt="Na Brasa Espetaria"
+                 class="w-24 h-24 object-cover rounded-full mx-auto mb-4 border-2 border-[#d4af37] bg-black">
+            <p class="text-white font-semibold">Na Brasa Espetaria</p>
+          </div>
+        </div>
+
+        <!-- Slide 14 -->
+        <div class="swiper-slide">
+          <div class="bg-[#091118] p-6 rounded-xl shadow-lg hover:shadow-xl transition-all">
+            <img src="moretti.png" alt="Point do Chopp"
+                 class="w-24 h-24 object-cover rounded-full mx-auto mb-4 border-2 border-[#d4af37] bg-black">
+            <p class="text-white font-semibold">Ponto do Chopp</p>
+          </div>
+        </div>
+
+<!-- Slide 15 -->
+        <div class="swiper-slide">
+          <div class="bg-[#091118] p-6 rounded-xl shadow-lg hover:shadow-xl transition-all">
+            <img src="resenhabar.png" alt="Resenha Bar"
+                 class="w-24 h-24 object-cover rounded-full mx-auto mb-4 border-2 border-[#d4af37] bg-black">
+            <p class="text-white font-semibold">Resenha Bar</p>
+          </div>
+        </div>
+
+<!-- Slide 16 -->
+        <div class="swiper-slide">
+          <div class="bg-[#091118] p-6 rounded-xl shadow-lg hover:shadow-xl transition-all">
+            <img src="mrburgerpiacatu.png" alt="Mr Burger Piacatu"
+                 class="w-24 h-24 object-cover rounded-full mx-auto mb-4 border-2 border-[#d4af37] bg-black">
+            <p class="text-white font-semibold">Mr Burger Piacatu</p>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Paginação (bolinhas) -->
+      <div class="swiper-pagination"></div>
+
+      <!-- Setas -->
+      <div class="swiper-button-prev"></div>
+      <div class="swiper-button-next"></div>
+    </div>
+  </div>
+</section>
+
+<section id="section-651860ffca751" class="s123-module s123-module-faq layout-4" data-module-id="651860ffca751" data-module-type-num="30" data-overlay-opacity="true">
+  <div class="container-fluid page_header_style noBackground" data-aos="fade-up">
+    <div class="row">
+      <div class="container moduleTitleContainer">
+        <div class="row modulesTitle text-center">
+          <div class="col-xs-12">
+            <div class="page-header-wrap">
+              <div class="three-dots"><span></span><span></span><span></span></div>
+            </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+<div class="faq-container">
+  <h2>soluções práticas para sua chopeira!</h2>
+  <h4>Vamos ajudar você a desfrutar do seu chopp com tranquilidade.</h4>
+
+  <div class="faq-card">
+    <button class="faq-question">SE SÓ SAI ESPUMA:</button>
+    <div class="faq-answer">
+      <p>Se a sua chopeira está produzindo excesso de espuma, existem algumas causas comuns para isso. A primeira dica é observar a pressão do manômetro, que deve estar entre 2 e 2,5 Kgf. Verifique também se não há torniquetes (dobras) nas mangueiras ou se não há bolhas de ar na mangueira. Lembrando que durante a instalação nossos técnicos fazem todas as verificações necessárias na pressão do gás para evitar problemas; mas qualquer equipamento está sujeito a defeitos no funcionamento. Diminuímos esses riscos com manutenção preventiva periódica.</p>
+    </div>
+  </div>
+
+  <div class="faq-card">
+    <button class="faq-question">SE A CHOPEIRA NÃO FUNCIONA:</button>
+    <div class="faq-answer">
+      <p>Se a chopeira não estiver funcionando, o primeiro passo é verificar se o plugue está corretamente conectado na tomada. Verifique se a voltagem está correta e se o disjuntor está acionado. Esses cuidados simples podem resolver o problema.</p>
+    </div>
+  </div>
+
+  <div class="faq-card">
+    <button class="faq-question">SE O CHOPP NÃO SAI:</button>
+    <div class="faq-answer">
+      <p>Se o chopp não estiver saindo, pode ser necessário verificar algumas coisas. Primeiramente, veja se o cilindro de gás está aberto e se o mecanismo de controle de vazão da torneira também está aberto. Cheque se ainda há chopp no barril e se a válvula extratora está na posição correta. Para checar se o chopp está congelado, retire a chopeira da fonte de energia por trinta minutos e no meio tempo tente retirar o chopp na torneira. Assim que o chopp sair, religue a chopeira na tomada.</p>
+    </div>
+  </div>
+
+  <div class="faq-card">
+  <button class="faq-question">A CHOPEIRA CHEGA ATÉ VOCÊ PRONTA PARA USO?</button>
+  <div class="faq-answer">
+    <p>Sim! A JK Chopp entrega tudo pronto: chopeira instalada, cilindro testado, tudo regulado. Só ligar e aproveitar.</p>
+    <p>Se mesmo assim houver algum problema, temos técnico plantonista para suporte presencial. Nosso objetivo é que você aproveite seu chopp sem preocupações.</p>
+    <p>Esperamos que tenha gostado das nossas dicas e que seu chopp continue sempre gelado e de qualidade. Até a próxima!</p>
+  </div>
+</div>
+</div> <!-- fim faq-container -->
+</section> <!-- fim da seção FAQ -->
+        <!-- Footer -->
+  <!-- Footer -->
+<footer class="bg-[#060d13] py-10 px-4 border-t border-[#d4af37] border-opacity-30 w-full">
+  <div class="max-w-[1440px] mx-auto flex flex-col md:flex-row justify-between items-center w-full px-4 lg:px-20">
+    <div class="mb-6 md:mb-0 text-center md:text-left">
+      <a href="#inicio" class="flex items-center justify-center md:justify-start gap-2">
+        <img src="jk-logo.png" alt="" class="w-12 h-12 object-contain rounded-full">
+        <span class="brand-title text-2xl">JK CHOPP</span>
+      </a>
+      <p class="text-gray-400 mt-2">O melhor chopp da região!</p>
+    </div>
+
+    <div class="flex space-x-4">
+      <a href="https://wa.me/5518996305019" class="w-10 h-10 bg-[#d4af37] bg-opacity-20 rounded-full flex items-center justify-center hover:bg-opacity-30 transition-all">
+        <i class="fab fa-whatsapp text-[#d4af37]"></i>
+      </a>
+      <a href="https://instagram.com/jkchopp" target="_blank" rel="noopener noreferrer" class="w-10 h-10 bg-[#d4af37] bg-opacity-20 rounded-full flex items-center justify-center hover:bg-opacity-30 transition-all">
+        <i class="fab fa-instagram text-[#d4af37]"></i>
+      </a>
+      <a href="mailto:www.jkchopp@gmail.com" class="w-10 h-10 bg-[#d4af37] bg-opacity-20 rounded-full flex items-center justify-center hover:bg-opacity-30 transition-all">
+        <i class="fas fa-envelope text-[#d4af37]"></i>
+      </a>
+    </div>
+  </div>
+
+  <div class="border-t border-gray-800 mt-8 pt-8 text-center w-full px-4 lg:px-20">
+    <p class="text-gray-400">JK CHOPP © <span id="copyright-year">2026</span> - Todos os direitos reservados.</p>
+    <p class="text-gray-400 mt-2">Rua Vasco da Gama, Nº 426 | Jardim Jussara, Araçatuba - SP | CEP 16021-100</p>
+    <p class="text-gray-500 text-sm mt-2">Beba com moderação. Não compartilhe com menores de 18 anos.</p>
+  </div>
+</footer>
+
+  <script>
+    // Menu mobile: abrir, fechar, navegação por teclado
+    const menuToggle = document.getElementById('menu-toggle');
+    const mobileMenu = document.getElementById('mobile-menu');
+    function setMobileMenu(open) {
+      mobileMenu.classList.toggle('active', open);
+      mobileMenu.classList.toggle('invisible', !open);
+      mobileMenu.classList.toggle('pointer-events-none', !open);
+      mobileMenu.toggleAttribute('inert', !open);
+      mobileMenu.setAttribute('aria-hidden', String(!open));
+      menuToggle.setAttribute('aria-expanded', String(open));
+      menuToggle.setAttribute('aria-label', open ? 'Fechar menu' : 'Abrir menu');
+    }
+    menuToggle.addEventListener('click', () => setMobileMenu(menuToggle.getAttribute('aria-expanded') !== 'true'));
+    mobileMenu.querySelectorAll('a').forEach(link => link.addEventListener('click', () => setMobileMenu(false)));
+    document.addEventListener('keydown', event => { if (event.key === 'Escape') setMobileMenu(false); });
+    window.addEventListener('resize', () => { if (window.innerWidth >= 768) setMobileMenu(false); });
+
+    // Smooth scrolling for anchor links
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function(e) {
+        e.preventDefault();
+        
+        const targetId = this.getAttribute('href');
+        const targetElement = targetId === "#" ? null : document.querySelector(targetId);
+        
+        if (targetElement) {
+          const navHeight = document.querySelector('nav').offsetHeight;
+          const targetPosition = targetElement.getBoundingClientRect().top + window.pageYOffset - navHeight;
+          
+          window.scrollTo({
+            top: targetPosition,
+            behavior: 'smooth'
+          });
+        }
+      });
+    });
+    
+    // Create beer bubbles effect
+    function createBubbles() {
+    const container = document.getElementById('bubbles-container');
+    if (!container) return;
+    const containerWidth = container.offsetWidth;
+
+    for (let i = 0; i < 20; i++) {
+      const bubble = document.createElement('div');
+      bubble.classList.add('beer-bubble');
+
+      const size = Math.random() * 15 + 5;
+      const left = Math.random() * containerWidth;
+      const delay = Math.random() * 5;
+      const duration = Math.random() * 8 + 4;
+
+      bubble.style.width = `${size}px`;
+      bubble.style.height = `${size}px`;
+      bubble.style.left = `${left}px`;
+      bubble.style.animationDelay = `${delay}s`;
+      bubble.style.animationDuration = `${duration}s`;
+
+      container.appendChild(bubble);
+    }
+  }
+
+  window.addEventListener('load', createBubbles);
+    
+    // Highlight active section in navigation
+    function highlightActiveSection() {
+      const sections = document.querySelectorAll('section, header');
+      const navLinks = document.querySelectorAll('.nav-link');
+      
+      let currentSection = '';
+      const navHeight = document.querySelector('nav').offsetHeight;
+      
+      sections.forEach(section => {
+        const sectionTop = section.offsetTop - navHeight - 10;
+        const sectionHeight = section.offsetHeight;
+        const sectionId = section.getAttribute('id');
+        
+        if (window.scrollY >= sectionTop && window.scrollY < sectionTop + sectionHeight) {
+          currentSection = sectionId;
+        }
+      });
+      
+      navLinks.forEach(link => {
+        link.classList.remove('text-[#e9c555]');
+        link.classList.add('text-white');
+        
+        if (link.getAttribute('href') === `#${currentSection}`) {
+          link.classList.remove('text-white');
+          link.classList.add('text-[#e9c555]');
+        }
+      });
+    }
+    window.addEventListener('scroll', highlightActiveSection);
+    window.addEventListener('load', highlightActiveSection);
+  </script>
+<script>
+  const cards = document.querySelectorAll('.faq-card');
+  cards.forEach((card, idx) => {
+    const question = card.querySelector('.faq-question');
+    const answer = card.querySelector('.faq-answer');
+    const answerId = `faq-answer-${idx + 1}`;
+    answer.id = answerId;
+    question.type = 'button';
+    question.setAttribute('aria-controls', answerId);
+    question.setAttribute('aria-expanded', 'false');
+    question.addEventListener('click', () => {
+      const shouldOpen = !card.classList.contains('active');
+      cards.forEach(c => {
+        c.classList.remove('active');
+        c.querySelector('.faq-question').setAttribute('aria-expanded', 'false');
+      });
+      if (shouldOpen) {
+        card.classList.add('active');
+        question.setAttribute('aria-expanded', 'true');
+      }
+    });
+  });
+</script>
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+<script>
+  const partnersSwiper = typeof Swiper !== "undefined" ? new Swiper('.partners-swiper', {
+    loop: true,
+    speed: 600,
+    spaceBetween: 20,
+    autoplay: {
+      delay: 2500,
+      disableOnInteraction: false,
+    },
+    // Quantidade de cards visíveis conforme a tela
+    slidesPerView: 1.2,
+    breakpoints: {
+      640: { slidesPerView: 2.2, spaceBetween: 20 },
+      768: { slidesPerView: 3,   spaceBetween: 24 },
+      1024:{ slidesPerView: 4,   spaceBetween: 24 },
+    },
+    // Navegação e paginação
+    pagination: {
+      el: '.partners-swiper .swiper-pagination',
+      clickable: true,
+    },
+    navigation: {
+      nextEl: '.partners-swiper .swiper-button-next',
+      prevEl: '.partners-swiper .swiper-button-prev',
+    },
+  }) : null;
+</script>
+<script>document.getElementById("copyright-year").textContent = new Date().getFullYear();</script>
+</body>
+</html>
